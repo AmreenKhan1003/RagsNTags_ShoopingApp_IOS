@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		06431E3428DB57600033D3CB /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06431E3328DB57600033D3CB /* DashboardViewController.swift */; };
+		06431E3628DB5CF90033D3CB /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06431E3528DB5CF90033D3CB /* RegisterViewController.swift */; };
+		06431E3D28DB7DAE0033D3CB /* UserRegisterData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06431E3C28DB7DAD0033D3CB /* UserRegisterData+CoreDataClass.swift */; };
+		06431E3E28DB7DAE0033D3CB /* UserRegisterData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06431E3B28DB7DAD0033D3CB /* UserRegisterData+CoreDataProperties.swift */; };
 		064AF79F28DB42B2001B9EA5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 064AF79E28DB42B2001B9EA5 /* GoogleService-Info.plist */; };
 		066A6D4628DAD88D00E2FD39 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 066A6D4528DAD88D00E2FD39 /* AppDelegate.swift */; };
 		066A6D4828DAD88D00E2FD39 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 066A6D4728DAD88D00E2FD39 /* SceneDelegate.swift */; };
@@ -42,6 +46,10 @@
 
 /* Begin PBXFileReference section */
 		02BE0DD31F5E9B81D3ADD507 /* Pods-RagsNTags-RagsNTagsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RagsNTags-RagsNTagsUITests.debug.xcconfig"; path = "Target Support Files/Pods-RagsNTags-RagsNTagsUITests/Pods-RagsNTags-RagsNTagsUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		06431E3328DB57600033D3CB /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
+		06431E3528DB5CF90033D3CB /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		06431E3B28DB7DAD0033D3CB /* UserRegisterData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UserRegisterData+CoreDataProperties.swift"; path = "/Users/capgemini-da322/Documents/sprint2/RagsNTags/RagsNTags/UserRegisterData+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
+		06431E3C28DB7DAD0033D3CB /* UserRegisterData+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UserRegisterData+CoreDataClass.swift"; path = "/Users/capgemini-da322/Documents/sprint2/RagsNTags/RagsNTags/UserRegisterData+CoreDataClass.swift"; sourceTree = "<absolute>"; };
 		064AF79E28DB42B2001B9EA5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		066A6D4228DAD88D00E2FD39 /* RagsNTags.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RagsNTags.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		066A6D4528DAD88D00E2FD39 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -121,6 +129,8 @@
 			isa = PBXGroup;
 			children = (
 				066A6D4528DAD88D00E2FD39 /* AppDelegate.swift */,
+				06431E3C28DB7DAD0033D3CB /* UserRegisterData+CoreDataClass.swift */,
+				06431E3B28DB7DAD0033D3CB /* UserRegisterData+CoreDataProperties.swift */,
 				066A6D4728DAD88D00E2FD39 /* SceneDelegate.swift */,
 				066A6D4928DAD88D00E2FD39 /* ViewController.swift */,
 				066A6D4B28DAD88D00E2FD39 /* Main.storyboard */,
@@ -129,6 +139,8 @@
 				066A6D5628DAD88E00E2FD39 /* Info.plist */,
 				064AF79E28DB42B2001B9EA5 /* GoogleService-Info.plist */,
 				066A6D4E28DAD88D00E2FD39 /* RagsNTags.xcdatamodeld */,
+				06431E3328DB57600033D3CB /* DashboardViewController.swift */,
+				06431E3528DB5CF90033D3CB /* RegisterViewController.swift */,
 			);
 			path = RagsNTags;
 			sourceTree = "<group>";
@@ -414,7 +426,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				066A6D5028DAD88D00E2FD39 /* RagsNTags.xcdatamodeld in Sources */,
+				06431E3D28DB7DAE0033D3CB /* UserRegisterData+CoreDataClass.swift in Sources */,
 				066A6D4A28DAD88D00E2FD39 /* ViewController.swift in Sources */,
+				06431E3428DB57600033D3CB /* DashboardViewController.swift in Sources */,
+				06431E3628DB5CF90033D3CB /* RegisterViewController.swift in Sources */,
+				06431E3E28DB7DAE0033D3CB /* UserRegisterData+CoreDataProperties.swift in Sources */,
 				066A6D4628DAD88D00E2FD39 /* AppDelegate.swift in Sources */,
 				066A6D4828DAD88D00E2FD39 /* SceneDelegate.swift in Sources */,
 			);

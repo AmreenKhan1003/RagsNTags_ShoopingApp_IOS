@@ -7,6 +7,7 @@
 
 import UIKit
 import LocalAuthentication
+import FirebaseAuth
 
 class AuthenticateUser{
     //MARK: Face ID Authentication
@@ -51,11 +52,34 @@ class AuthenticateUser{
     }//End of func
 }//End of AuthenticateUser class
 
+class AuthenticateUserFromFirebase: UIViewController{
+    
+    func loginUserFromFirebase(emailId: String, password: String){
+        Auth.auth().signIn(withEmail: emailId, password: password) { result, error in
+            if let _error = error{
+                print(_error.localizedDescription)
+                //call alert
+            }
+            else{
+                print("user logged in successfully")
+                let dash = self.storyboard?.instantiateViewController(withIdentifier: "dashVC")
+                self.navigationController?.pushViewController(dash!, animated: true)
+            }
+        }
+    }
+}//End of class AuthenticateUserFromFirbase
+
+
 
 
 class ViewController: UIViewController {
-
+    
+    //MARK: IBOutlet on ViewController (Login page)
+    @IBOutlet weak var emailTxtFld: UITextField!
+    @IBOutlet weak var passwordTxtFld: UITextField!
     @IBOutlet weak var logoImg: UIImageView!
+    
+    //MARK: viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -80,6 +104,16 @@ class ViewController: UIViewController {
                     self.logoImg.transform = CGAffineTransform.identity
                 }
             })
+    }// End of animateLogo function
+    
+    //MARK: Login button action to validate user from fire base
+    @IBAction func enterButtonIsClicked(_ sender: Any) {
+        let email: String = emailTxtFld.text!
+        let password: String = passwordTxtFld.text!
+        
+        //Call function to authenticate from firebase
+        let authuser = AuthenticateUserFromFirebase()
+        authuser.loginUserFromFirebase(emailId: email, password: password)
     }
     
 
