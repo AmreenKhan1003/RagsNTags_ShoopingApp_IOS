@@ -49,19 +49,38 @@ class AuthenticateUser{
             }
         }//End of if
     }//End of func
-}
+}//End of AuthenticateUser class
+
+
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var logoImg: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         //authenticateUserByFace()
         let auth = AuthenticateUser()
         auth.authenticateUserByPasscode()
+        
+        //call animation
+        animateLogo()
     }
     
-    
+    //MARK: function animate logo image
+    func animateLogo(){
+        UIView.animate(withDuration: 2,
+            animations: {
+            //CGAffineTransform Structure used to rotate, scale, translate, or skew the objects
+            //transform property to scale or rotate
+            self.logoImg.transform = CGAffineTransform(scaleX: 0, y: 0)
+            },
+            completion: { _ in
+            UIView.animate(withDuration: 3) {
+                    self.logoImg.transform = CGAffineTransform.identity
+                }
+            })
+    }
     
 
 }
