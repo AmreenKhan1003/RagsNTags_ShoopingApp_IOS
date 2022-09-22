@@ -22,6 +22,11 @@
 		066A6D6028DAD88F00E2FD39 /* RagsNTagsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 066A6D5F28DAD88F00E2FD39 /* RagsNTagsTests.swift */; };
 		066A6D6A28DAD88F00E2FD39 /* RagsNTagsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 066A6D6928DAD88F00E2FD39 /* RagsNTagsUITests.swift */; };
 		066A6D6C28DAD88F00E2FD39 /* RagsNTagsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 066A6D6B28DAD88F00E2FD39 /* RagsNTagsUITestsLaunchTests.swift */; };
+		068E608A28DC63100078DF37 /* GroceriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068E608928DC63100078DF37 /* GroceriesViewController.swift */; };
+		068E608C28DC63510078DF37 /* FashionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068E608B28DC63510078DF37 /* FashionViewController.swift */; };
+		068E608E28DC63B30078DF37 /* MobileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068E608D28DC63B30078DF37 /* MobileViewController.swift */; };
+		068E609028DC63EF0078DF37 /* BeautyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068E608F28DC63EF0078DF37 /* BeautyViewController.swift */; };
+		068E609228DC685F0078DF37 /* products.json in Resources */ = {isa = PBXBuildFile; fileRef = 068E609128DC685F0078DF37 /* products.json */; };
 		223D387B40F8CA14312E18DC /* Pods_RagsNTagsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8042D807DBB7A0D91720E8CB /* Pods_RagsNTagsTests.framework */; };
 		D32D7BCB1489856274A3C0C3 /* Pods_RagsNTags_RagsNTagsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAA792CDB5C42E45DEB1101C /* Pods_RagsNTags_RagsNTagsUITests.framework */; };
 		D56AEFFF1D435CC4FE22DC56 /* Pods_RagsNTags.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C13590E9BC074D2DB59FF36C /* Pods_RagsNTags.framework */; };
@@ -65,6 +70,11 @@
 		066A6D6528DAD88F00E2FD39 /* RagsNTagsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RagsNTagsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		066A6D6928DAD88F00E2FD39 /* RagsNTagsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RagsNTagsUITests.swift; sourceTree = "<group>"; };
 		066A6D6B28DAD88F00E2FD39 /* RagsNTagsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RagsNTagsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		068E608928DC63100078DF37 /* GroceriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceriesViewController.swift; sourceTree = "<group>"; };
+		068E608B28DC63510078DF37 /* FashionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FashionViewController.swift; sourceTree = "<group>"; };
+		068E608D28DC63B30078DF37 /* MobileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileViewController.swift; sourceTree = "<group>"; };
+		068E608F28DC63EF0078DF37 /* BeautyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeautyViewController.swift; sourceTree = "<group>"; };
+		068E609128DC685F0078DF37 /* products.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = products.json; sourceTree = "<group>"; };
 		612766A4A5A465A1976BB513 /* Pods-RagsNTags-RagsNTagsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RagsNTags-RagsNTagsUITests.release.xcconfig"; path = "Target Support Files/Pods-RagsNTags-RagsNTagsUITests/Pods-RagsNTags-RagsNTagsUITests.release.xcconfig"; sourceTree = "<group>"; };
 		667B93D24C6BD405956A4D2B /* Pods-RagsNTags.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RagsNTags.debug.xcconfig"; path = "Target Support Files/Pods-RagsNTags/Pods-RagsNTags.debug.xcconfig"; sourceTree = "<group>"; };
 		784B326E142630F000D0108C /* Pods-RagsNTagsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RagsNTagsTests.debug.xcconfig"; path = "Target Support Files/Pods-RagsNTagsTests/Pods-RagsNTagsTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -138,9 +148,14 @@
 				066A6D5328DAD88E00E2FD39 /* LaunchScreen.storyboard */,
 				066A6D5628DAD88E00E2FD39 /* Info.plist */,
 				064AF79E28DB42B2001B9EA5 /* GoogleService-Info.plist */,
+				068E609128DC685F0078DF37 /* products.json */,
 				066A6D4E28DAD88D00E2FD39 /* RagsNTags.xcdatamodeld */,
 				06431E3328DB57600033D3CB /* DashboardViewController.swift */,
 				06431E3528DB5CF90033D3CB /* RegisterViewController.swift */,
+				068E608928DC63100078DF37 /* GroceriesViewController.swift */,
+				068E608B28DC63510078DF37 /* FashionViewController.swift */,
+				068E608D28DC63B30078DF37 /* MobileViewController.swift */,
+				068E608F28DC63EF0078DF37 /* BeautyViewController.swift */,
 			);
 			path = RagsNTags;
 			sourceTree = "<group>";
@@ -294,6 +309,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				068E609228DC685F0078DF37 /* products.json in Resources */,
 				066A6D5528DAD88E00E2FD39 /* LaunchScreen.storyboard in Resources */,
 				064AF79F28DB42B2001B9EA5 /* GoogleService-Info.plist in Resources */,
 				066A6D5228DAD88E00E2FD39 /* Assets.xcassets in Resources */,
@@ -427,12 +443,16 @@
 			files = (
 				066A6D5028DAD88D00E2FD39 /* RagsNTags.xcdatamodeld in Sources */,
 				06431E3D28DB7DAE0033D3CB /* UserRegisterData+CoreDataClass.swift in Sources */,
+				068E609028DC63EF0078DF37 /* BeautyViewController.swift in Sources */,
 				066A6D4A28DAD88D00E2FD39 /* ViewController.swift in Sources */,
+				068E608A28DC63100078DF37 /* GroceriesViewController.swift in Sources */,
 				06431E3428DB57600033D3CB /* DashboardViewController.swift in Sources */,
+				068E608E28DC63B30078DF37 /* MobileViewController.swift in Sources */,
 				06431E3628DB5CF90033D3CB /* RegisterViewController.swift in Sources */,
 				06431E3E28DB7DAE0033D3CB /* UserRegisterData+CoreDataProperties.swift in Sources */,
 				066A6D4628DAD88D00E2FD39 /* AppDelegate.swift in Sources */,
 				066A6D4828DAD88D00E2FD39 /* SceneDelegate.swift in Sources */,
+				068E608C28DC63510078DF37 /* FashionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -169,6 +169,8 @@ class RegisterViewController: UIViewController {
                             //store data in firebase
                             let regFirebase = RegisterUserOnFirebase()
                             regFirebase.registerOnFirebase(emailid: email, password: password)
+                            let login = self.storyboard?.instantiateViewController(withIdentifier: "loginVC")
+                            self.navigationController?.pushViewController(login!, animated: true)
                         }
                     }
                 }

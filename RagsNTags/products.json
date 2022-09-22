@@ -1,0 +1,247 @@
+{
+	"Mobiles": [{
+			"name": "Iphone 13 Pro Max",
+			"desc": "pro phone",
+			"price": "1,19,900",
+			"img": ""
+		},
+		{
+			"name": "Samsung Galaxy S20 FE 5G",
+			"desc": "(Cloud Navy, 8GB RAM, 128GB Storage) with No Cost EMI & Additional Exchange Offers",
+			"price": "29,999.00",
+			"img": ""
+		},
+		{
+			"name": "OnePlus Nord CE 2 Lite 5G",
+			"desc": "Blue Tide, 6GB RAM, 128GB Storage",
+			"price": "18,999.00",
+			"img": ""
+		},
+		{
+			"name": "Redmi 9 Activ",
+			"desc": "(Coral Green, 4GB RAM, 64GB Storage)| Octa-core Helio G35 | 5000 mAh Battery",
+			"price": "8,099.00",
+			"img": ""
+		},
+		{
+			"name": "Samsung Galaxy M13",
+			"desc": "(Midnight Blue, 4GB, 64GB Storage) | 6000mAh Battery | Upto 8GB RAM with RAM Plus",
+			"price": " 11,999.00",
+			"img": ""
+		},
+		{
+			"name": "OnePlus 10R 5G - Prime Edition",
+			"desc": "Prime Blue, 8GB RAM, 128GB Storage, 80W SuperVOOC",
+			"price": " 32,999.00",
+			"img": ""
+		},
+		{
+			"name": "OPPO F21s Pro",
+			"desc": "(Dawnlight Gold, 8GB RAM, 128 Storage) with No Cost EMI/Additional Exchange Offers",
+			"price": " 22,559",
+			"img": ""
+		},
+		{
+			"name": "Motorola Moto G71 5G",
+			"desc": "Neptune Green, 6GB RAM 128GB Storage",
+			"price": " 16,990.00",
+			"img": ""
+		},
+		{
+			"name": "Xiaomi Mi A3",
+			"desc": "Not Just Blue, 4GB RAM, 64GB Storage",
+			"price": " 13,989.00",
+			"img": ""
+		},
+		{
+			"name": "Micromax in 2C",
+			"desc": "(Brown, 32 GB)  (3 GB RAM)",
+			"price": " 7,475.00",
+			"img": ""
+		}
+	],
+	"Clothes": [{
+			"name": "Tank Top",
+			"desc": "Aahwan Women's & Girls' Solid Ribbed Crop Tank Top",
+			"price": " 289.00",
+			"img": ""
+		},
+		{
+			"name": "Crop T-Shirt",
+			"desc": "RodZen Women's Cotton Printed Regular Crop T-Shirt",
+			"price": " 279.00",
+			"img": ""
+		},
+		{
+			"name": "INDO ERA",
+			"desc": "INDO ERA Foil Print Straight Viscose Rayon Kurti for Women (IE00KT5RD1640)",
+			"price": " 299.00",
+			"img": ""
+		},
+		{
+			"name": "Vaamsi",
+			"desc": "Vaamsi Women's Crepe Regular Kurta",
+			"price": " 299.00",
+			"img": ""
+		},
+		{
+			"name": "Q - RIOUS",
+			"desc": "Q - RIOUS Women's Boyfriend Fit Jogger Style Denim Jeans",
+			"price": " 599.00",
+			"img": ""
+		},
+		{
+			"name": "Miss Olive",
+			"desc": "Miss Olive Women's Skinny Jeans",
+			"price": " 580.00",
+			"img": ""
+		},
+		{
+			"name": "GRECIILOOKS",
+			"desc": "Western Dresses for Women | A-Line Knee-Length Dress | Midi Western Dress for Women| Short Dress",
+			"price": " 479.00",
+			"img": ""
+		},
+		{
+			"name": "SIRIL",
+			"desc": "SIRIL Women's Mini Bodycon Dress (266TK6023-M_Wine_M)",
+			"price": " 349.00",
+			"img": ""
+		},
+		{
+			"name": "Enthone",
+			"desc": "Enthone Women's Woven Banarasi Kanchipuram Art Silk Saree with Blouse Piece",
+			"price": " 832.00",
+			"img": ""
+		},
+		{
+			"name": "GoSriKi",
+			"desc": "GoSriKi Women's Black Georgette Printed Saree with Blouse Piece",
+			"price": " 299.00",
+			"img": ""
+		}
+	],
+	"Groceries": [{
+			"name": "Cucumber",
+			"desc": "Fresh Cucumber, 500g",
+			"price": " 14.00",
+			"img": ""
+		},
+		{
+			"name": "Papaya",
+			"desc": "Fresh Papaya medium, 1 Piece (800gm)",
+			"price": " 68.00",
+			"img": ""
+		},
+		{
+			"name": "Soy Milk",
+			"desc": "So Good Soy Milk 4L (4X 1000 ml)",
+			"price": " 459.00",
+			"img": ""
+		},
+		{
+			"name": "Rajma",
+			"desc": "Amazon Brand - Vedaka Premium Chitra Rajma, 1 kg",
+			"price": " 180.00",
+			"img": ""
+		},
+		{
+			"name": "Onion",
+			"desc": "Fresh Onion, 1kg",
+			"price": " 22.00",
+			"img": ""
+		},
+		{
+			"name": "Potato",
+			"desc": "Fresh Potato, 1kg",
+			"price": " 34.00",
+			"img": ""
+		},
+		{
+			"name": "Bhendi",
+			"desc": "Fresh Bhendi, 500g",
+			"price": " 24.00",
+			"img": ""
+		},
+		{
+			"name": "Paneer",
+			"desc": "Amul Fresh Paneer Block Pouch, 200 g",
+			"price": " 71.00",
+			"img": ""
+		},
+		{
+			"name": "Harpic",
+			"desc": "Disinfectant Toilet Cleaner Liquid, Original - 1 L",
+			"price": " 348.00",
+			"img": ""
+		},
+		{
+			"name": "Dettol",
+			"desc": "Dettol Antiseptic Liquid for First Aid , Surface Disinfection and Personal Hygiene , 1000ml",
+			"price": " 301.00",
+			"img": ""
+		}
+	],
+	"Beauty": [{
+			"name": "Mamaearth",
+			"desc": "Ubtan Natural Face Wash for All Skin Type with Turmeric & Saffron for Tan removal and Skin brightning 100 ml",
+			"price": " 212.00",
+			"img": "Users/capgemini-da322/Desktop/b1.jpg"
+		},
+		{
+			"name": "Serum",
+			"desc": "The Natural Wash 5-in-1 Hair Repair Spray Serum for Frizz-Free & Manageable Hair",
+			"price": " 356.00",
+			"img": "/beauty/b1.jpg"
+		},
+		{
+			"name": "Livon Hair Serum",
+			"desc": "Livon Hair Serum for Women & Men| All Hair Types |Smooth, Frizz free & Glossy Hair",
+			"price": " 201.00",
+			"img": "/beauty/b1.jpg"
+		},
+		{
+			"name": "Maybelline",
+			"desc": "Maybelline New York Hypercurl Mascara Waterproof, Black, 9.2g",
+			"price": " 359.00",
+			"img": "/beauty/b1.jpg"
+		},
+		{
+			"name": "Eyeshadow",
+			"desc": "Swiss Beauty Ultimate 9 Pigmented colors Eyeshadow Palette",
+			"price": "  229.00",
+			"img": "/beauty/b1.jpg"
+		},
+		{
+			"name": "Concealer",
+			"desc": "Insight HD Concealer, Golden Sand-04",
+			"price": " 167.00",
+			"img": "/beauty/b1.jpg"
+		},
+		{
+			"name": "Concealer Palette",
+			"desc": "Swiss Beauty Ultra Base Concealer Palette, Face Makeup, Multicolor-01, 19g",
+			"price": " 341.00",
+			"img": "/beauty/b1.jpg"
+		},
+		{
+			"name": "Body Lotion",
+			"desc": "Parachute Advansed Body Lotion Soft Touch, With Honey, Silky Smooth Skin, 400 ml",
+			"price": " 372.00",
+			"img": "/beauty/b1.jpg"
+		},
+		{
+			"name": "Bella Vita",
+			"desc": "Bella Vita Organic EyeLift Hydrating Natural Under Eye Cream Gel for Dark Circles",
+			"price": " 263.25",
+			"img": "/beauty/b1.jpg"
+		},
+		{
+			"name": "Face Wash",
+			"desc": "Himalaya Purifying Neem Face Wash, 400 ml",
+			"price": " 263.00",
+			"img": "/beauty/b1.jpg"
+		}
+	]
+
+}
