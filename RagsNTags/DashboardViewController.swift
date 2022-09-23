@@ -13,7 +13,7 @@ class DashboardViewController: UIViewController {
     var name: String??
     override func viewDidLoad() {
         super.viewDidLoad()
-        nameLabel.text = name!!
+        //nameLabel.text = name!!
         navigationItem.hidesBackButton = true
         // Do any additional setup after loading the view.
     }
@@ -37,4 +37,9 @@ class DashboardViewController: UIViewController {
         let beauty = storyboard?.instantiateViewController(withIdentifier: "BeautyVC")
         self.navigationController?.pushViewController(beauty!, animated: true)
     }
+    
+    //MARK: Load more categories
+    @IBAction func loadMoreCategoriesClicked(_ sender: Any) {
+        let beauty = storyboard?.instantiateViewController(withIdentifier: "tabcategories")
+        self.navigationController?.pushViewController(beauty!, animated: true)    }
 }

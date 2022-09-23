@@ -102,5 +102,19 @@ class MobileViewController: UIViewController, UITableViewDelegate, UITableViewDa
         cell.productImage.image = UIImage(named: (imgarray[indexPath.row] + ".jpg"))
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let name = namearray[indexPath.row]
+        let desc = descarray[indexPath.row]
+        let price = pricearray[indexPath.row]
+        let image = imgarray[indexPath.row]
+        let productDetails = storyboard?.instantiateViewController(withIdentifier: "ProductVC") as! ProductViewController
+        productDetails.passName = name as? String
+        productDetails.passDesc = desc as? String
+        productDetails.passPrice = price as? String
+        productDetails.passImg = UIImage(named: image + ".jpg")
+        self.navigationController?.pushViewController(productDetails, animated: true)
+        
+    }
 
 }

@@ -55,6 +55,7 @@ class TextFieldValidation{
 }
 
 class RegisterUserOnCoreData{
+    
     func registerOnCoreData(name: String, mobile: String, email: String, password: String) -> Bool{
     let appDelegate = (UIApplication.shared.delegate) as! AppDelegate
     let context = appDelegate.persistentContainer.viewContext

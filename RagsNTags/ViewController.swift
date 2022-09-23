@@ -9,6 +9,8 @@ import UIKit
 import LocalAuthentication
 import FirebaseAuth
 import CoreData
+import FirebaseStorage
+import FirebaseDatabase
 
 class CoreDataFetch{
     
@@ -95,21 +97,24 @@ class AuthenticateUserFromFirebase: UIViewController{
     
     func logninUserFromFirebase(emailId: String, password: String) -> Bool{
         var flag = 0
-        Auth.auth().signIn(withEmail: emailId, password: password){ result, error in
+        
+        Auth.auth().signIn(withEmail: emailId, password: password) { result, error in
             if let _error = error{
                 flag = 1
-                print("Cant enter data in firebase \(_error.localizedDescription)")
+                print(_error.localizedDescription)
             }
             else{
-                print("user logged in success fully")
+                flag = 0
+                print("User registered")
             }
-            
         }
-        if(flag == 1 ){
-            return false
+        
+        print(flag)
+        if(flag == 0 ){
+            return true
         }
         else{
-            return true
+            return false
         }
     }
     
@@ -152,6 +157,37 @@ class ViewController: UIViewController {
             })
     }// End of animateLogo function
     
+    //MARK: function to authenticate user from firebase
+    func logninUserFromFirebase(emailId: String, password: String) -> Bool{
+        var flag = 0
+        
+        Auth.auth().signIn(withEmail: emailId, password: password) { result, error in
+            if let _error = error{
+                flag = 1
+                print(_error.localizedDescription)
+                //call alert
+            }
+            else{
+                flag = 0
+                print("User registered")
+                let dash = self.storyboard?.instantiateViewController(withIdentifier: "dash") as! DashboardViewController
+                let fetchname = CoreDataFetch()
+                let name = fetchname.fetchname(email: emailId)
+                dash.name = name
+                self.navigationController?.pushViewController(dash, animated: true)
+            }
+        }
+        
+        print(flag)
+        if(flag == 0 ){
+            return true
+        }
+        else{
+            return false
+        }
+    }
+    
+    
     //MARK: Login button action to validate user from fire base
     @IBAction func enterButtonIsClicked(_ sender: Any) {
         
@@ -159,16 +195,8 @@ class ViewController: UIViewController {
         let password: String = passwordTxtFld.text!
         
         //Call function to authenticate from firebase
-        let authuser = AuthenticateUserFromFirebase()
-        if(authuser.logninUserFromFirebase(emailId: email, password: password)){
-            //call alert
-            let dash = self.storyboard?.instantiateViewController(withIdentifier: "dash") as! DashboardViewController
-            let fetchname = CoreDataFetch()
-            let name = fetchname.fetchname(email: email)
-            dash.name = name
-            self.navigationController?.pushViewController(dash, animated: true)
-            
-        }
+        print(logninUserFromFirebase(emailId: email, password: password))
+        
     }//end of func enterButtonClicked
     
     //MARK: click here! button is clicked
