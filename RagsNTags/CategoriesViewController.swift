@@ -85,6 +85,13 @@ class CategoriesViewController: UIViewController, UITableViewDelegate, UITableVi
         
         
     }
+    
+    @IBAction func logOutisClicked(_ sender: Any) {
+        let dele = CoreDataCart()
+        dele.deleteAllItems()
+        let navHome = storyboard?.instantiateViewController(withIdentifier: "loginVC")
+        self.navigationController?.pushViewController(navHome!, animated: true)
+    }
 
     
 

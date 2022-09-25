@@ -34,23 +34,38 @@ class CartViewController: UIViewController, UITableViewDelegate, UITableViewData
     var cartItemsPrice = NSMutableArray()
     var cartItemsImg = NSMutableArray()
     
+    
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
         let storeitem = CoreDataCart()
+        
         cartItems = storeitem.fetchname()
         cartItemsImg = storeitem.fetchImg()
         cartItemsPrice = storeitem.fetchPrice()
-        print(cartItemsImg)
         
-        print(storeitem.fetchname())
         DispatchQueue.main.async {
             self.cartTableView.delegate = self
             self.cartTableView.dataSource = self
             self.cartTableView.reloadData()
         }//END OF DISPATCHQUEUE
+        print(cartItemsImg)
+        
+        print(storeitem.fetchname())
     }
     
+    
+    @IBAction func logOutisClicked(_ sender: Any) {
+        let dele = CoreDataCart()
+        dele.deleteAllItems()
+        let navHome = storyboard?.instantiateViewController(withIdentifier: "loginVC")
+        self.navigationController?.pushViewController(navHome!, animated: true)
+    }
     
     @IBAction func buyNowClicked(_ sender: Any) {
         

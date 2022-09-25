@@ -19,6 +19,7 @@ class CoreDataFetch{
         var flag = 0
         let appDelegate = (UIApplication.shared.delegate) as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
+        
 
         do{
             let edata = try context.fetch(UserRegisterData.fetchRequest()) as! [UserRegisterData]
@@ -135,8 +136,9 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         //authenticateUserByFace()
-        let auth = AuthenticateUser()
-        auth.authenticateUserByPasscode()
+        
+        
+        navigationItem.hidesBackButton = true
         
         //call animation
         animateLogo()

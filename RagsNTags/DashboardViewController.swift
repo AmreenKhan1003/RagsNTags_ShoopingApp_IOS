@@ -10,12 +10,25 @@ import UIKit
 class DashboardViewController: UIViewController {
     
     @IBOutlet weak var nameLabel: UILabel!
-    var name: String??
+    var name: String?
     override func viewDidLoad() {
         super.viewDidLoad()
-        nameLabel.text = name!!
+        
+        if name != nil{
+        
+        nameLabel.text = name!
+        }
         navigationItem.hidesBackButton = true
         // Do any additional setup after loading the view.
+        
+    }
+    
+    
+    @IBAction func logOutisClicked(_ sender: Any) {
+        let dele = CoreDataCart()
+        dele.deleteAllItems()
+        let navHome = storyboard?.instantiateViewController(withIdentifier: "loginVC")
+        self.navigationController?.pushViewController(navHome!, animated: true)
     }
     
     @IBAction func groceriesClicked(_ sender: Any) {

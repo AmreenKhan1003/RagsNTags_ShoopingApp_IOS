@@ -26,7 +26,12 @@ class CheckoutViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func payIsClicked(_ sender: Any) {
+        
+        let order = storyboard?.instantiateViewController(withIdentifier: "maps") as! MapUserViewController
+        self.navigationController?.pushViewController(order, animated: true)
+    }
+    
     
 
 }

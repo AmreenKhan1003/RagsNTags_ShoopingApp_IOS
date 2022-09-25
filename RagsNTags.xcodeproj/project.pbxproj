@@ -27,6 +27,8 @@
 		066A6D6028DAD88F00E2FD39 /* RagsNTagsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 066A6D5F28DAD88F00E2FD39 /* RagsNTagsTests.swift */; };
 		066A6D6A28DAD88F00E2FD39 /* RagsNTagsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 066A6D6928DAD88F00E2FD39 /* RagsNTagsUITests.swift */; };
 		066A6D6C28DAD88F00E2FD39 /* RagsNTagsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 066A6D6B28DAD88F00E2FD39 /* RagsNTagsUITestsLaunchTests.swift */; };
+		0685879C28E0CB550024941B /* MapUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0685879B28E0CB550024941B /* MapUserViewController.swift */; };
+		0685879E28E0D46A0024941B /* ThankYouViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0685879D28E0D46A0024941B /* ThankYouViewController.swift */; };
 		068B77E828DDE79000D6A079 /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068B77E728DDE79000D6A079 /* CategoriesViewController.swift */; };
 		068B77EA28DDE7D300D6A079 /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068B77E928DDE7D300D6A079 /* CartViewController.swift */; };
 		068E608A28DC63100078DF37 /* GroceriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068E608928DC63100078DF37 /* GroceriesViewController.swift */; };
@@ -82,6 +84,8 @@
 		066A6D6528DAD88F00E2FD39 /* RagsNTagsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RagsNTagsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		066A6D6928DAD88F00E2FD39 /* RagsNTagsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RagsNTagsUITests.swift; sourceTree = "<group>"; };
 		066A6D6B28DAD88F00E2FD39 /* RagsNTagsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RagsNTagsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		0685879B28E0CB550024941B /* MapUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapUserViewController.swift; sourceTree = "<group>"; };
+		0685879D28E0D46A0024941B /* ThankYouViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThankYouViewController.swift; sourceTree = "<group>"; };
 		068B77E728DDE79000D6A079 /* CategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewController.swift; sourceTree = "<group>"; };
 		068B77E928DDE7D300D6A079 /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
 		068E608928DC63100078DF37 /* GroceriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceriesViewController.swift; sourceTree = "<group>"; };
@@ -177,6 +181,8 @@
 				068B77E928DDE7D300D6A079 /* CartViewController.swift */,
 				0618AE6628DEDF2F00B90A97 /* ProductDetailsViewController.swift */,
 				0618AE7028DF8D0B00B90A97 /* CheckoutViewController.swift */,
+				0685879B28E0CB550024941B /* MapUserViewController.swift */,
+				0685879D28E0D46A0024941B /* ThankYouViewController.swift */,
 			);
 			path = RagsNTags;
 			sourceTree = "<group>";
@@ -465,6 +471,7 @@
 				066A6D5028DAD88D00E2FD39 /* RagsNTags.xcdatamodeld in Sources */,
 				06431E3D28DB7DAE0033D3CB /* UserRegisterData+CoreDataClass.swift in Sources */,
 				0636AE6328DCBC5400D8447E /* SelectedCategoryViewController.swift in Sources */,
+				0685879E28E0D46A0024941B /* ThankYouViewController.swift in Sources */,
 				068E609028DC63EF0078DF37 /* BeautyViewController.swift in Sources */,
 				066A6D4A28DAD88D00E2FD39 /* ViewController.swift in Sources */,
 				0618AE6F28DF519A00B90A97 /* CartData+CoreDataProperties.swift in Sources */,
@@ -472,6 +479,7 @@
 				06431E3428DB57600033D3CB /* DashboardViewController.swift in Sources */,
 				068E608E28DC63B30078DF37 /* MobileViewController.swift in Sources */,
 				06431E3628DB5CF90033D3CB /* RegisterViewController.swift in Sources */,
+				0685879C28E0CB550024941B /* MapUserViewController.swift in Sources */,
 				06431E3E28DB7DAE0033D3CB /* UserRegisterData+CoreDataProperties.swift in Sources */,
 				0618AE6E28DF519A00B90A97 /* CartData+CoreDataClass.swift in Sources */,
 				066A6D4628DAD88D00E2FD39 /* AppDelegate.swift in Sources */,
