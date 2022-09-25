@@ -13,7 +13,7 @@ class DashboardViewController: UIViewController {
     var name: String??
     override func viewDidLoad() {
         super.viewDidLoad()
-        //nameLabel.text = name!!
+        nameLabel.text = name!!
         navigationItem.hidesBackButton = true
         // Do any additional setup after loading the view.
     }

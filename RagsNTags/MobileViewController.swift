@@ -102,7 +102,7 @@ class MobileViewController: UIViewController, UITableViewDelegate, UITableViewDa
         cell.productImage.image = UIImage(named: (imgarray[indexPath.row] + ".jpg"))
         return cell
     }
-    
+    /*
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let name = namearray[indexPath.row]
         let desc = descarray[indexPath.row]
@@ -116,5 +116,6 @@ class MobileViewController: UIViewController, UITableViewDelegate, UITableViewDa
         self.navigationController?.pushViewController(productDetails, animated: true)
         
     }
+     */
 
 }
