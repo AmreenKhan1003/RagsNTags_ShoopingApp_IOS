@@ -44,6 +44,8 @@ class SelectedCategoryViewController: UIViewController, UITableViewDelegate, UIT
     var imgarray = NSMutableArray()
     var passcategory: String?
     
+    
+    
     var nameCart: String?
     //MARK: Table view to display data
     @IBOutlet weak var homeTableView: UITableView!
@@ -107,9 +109,7 @@ class SelectedCategoryViewController: UIViewController, UITableViewDelegate, UIT
     }
     
     
-    @IBAction func cartButtonClicked(_ sender: Any) {
-        print(nameCart)
-    }
+    
     
     
     
@@ -135,15 +135,18 @@ class SelectedCategoryViewController: UIViewController, UITableViewDelegate, UIT
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let name = namearray[indexPath.row]
-        nameCart = name as! String
+        nameCart = name as? String
+        
         let desc = descarray[indexPath.row]
         let price = pricearray[indexPath.row]
+       
         let image = imgarray[indexPath.row]
+        
         let productDetails = storyboard?.instantiateViewController(withIdentifier: "proDetails") as! ProductDetailsViewController
         productDetails.passName = (name as! String)
         productDetails.passDesc = (desc as! String)
         productDetails.passPrice = (price as! String)
-        productDetails.passImg = image as! String
+        productDetails.passImg = image as? String
         self.navigationController?.pushViewController(productDetails, animated: true)
     }
 

@@ -8,16 +8,43 @@
 import UIKit
 import CoreData
 import FirebaseCore
-
+import UserNotifications
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
+        let notificationCenter = UNUserNotificationCenter.current()
+        UIApplication.shared.applicationIconBadgeNumber = 0
+        //notificationCenter.delegate = self
+        notificationCenter.requestAuthorization(options: [.alert, .sound, .badge]) { (permissionGranted, error) in
+            if(!permissionGranted){
+                print("Permission Denied")
+            }//END OF IF
+        }
+        
+        NotificationCenter.default.addObserver(forName: UIApplication.willEnterForegroundNotification, object: nil, queue: nil){
+            (_) in
+            print("Will enter Forground")
+        }
+        
+        NotificationCenter.default.addObserver(forName: UIApplication.didBecomeActiveNotification, object: nil, queue: nil){
+            (_) in
+            print("Did Become Active")
+        }
+        //When will press home button
+        NotificationCenter.default.addObserver(forName: UIApplication.didEnterBackgroundNotification, object: nil, queue: nil){
+            (_) in
+            print("Did Enter Background")
+        }
+        
         FirebaseApp.configure()
         let auth = AuthenticateUser()
         auth.authenticateUserByPasscode()
+        
+        
         // Override point for customization after application launch.
         return true
     }

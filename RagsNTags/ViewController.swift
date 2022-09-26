@@ -14,7 +14,7 @@ import FirebaseDatabase
 import AlertsAndNotifications
 
 public var emailIDUser: String?
-
+public var nameUser: String?
 class CoreDataFetch{
     
     func fetchname(email: String) -> String {
@@ -199,9 +199,8 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         //authenticateUserByFace()
         
-        let a = Alerts()
-        a.alert1()
-        navigationItem.hidesBackButton = true
+        
+                navigationItem.hidesBackButton = true
         
         //call animation
         animateLogo()
@@ -226,19 +225,21 @@ class ViewController: UIViewController {
     func logninUserFromFirebase(emailId: String, password: String) -> Bool{
         var flag = 0
         
-        Auth.auth().signIn(withEmail: emailId, password: password) { result, error in
+        Auth.auth().signIn(withEmail: emailId, password: password) { [self] result, error in
             if let _error = error{
+                //self.alerts.invalidCredentials()
+                invalidCredentials()
                 flag = 1
                 print(_error.localizedDescription)
-                //call alert
+                
             }
             else{
                 flag = 0
                 print("User registered")
                 let dash = self.storyboard?.instantiateViewController(withIdentifier: "dash") as! DashboardViewController
                 let fetchname = CoreDataFetch()
-                let name = fetchname.fetchname(email: emailId)
-                dash.name = name
+                nameUser = fetchname.fetchname(email: emailId)
+                dash.name = nameUser!
                 self.navigationController?.pushViewController(dash, animated: true)
             }
         }
@@ -251,6 +252,7 @@ class ViewController: UIViewController {
             return false
         }
     }
+    
     
     
     //MARK: Login button action to validate user from fire base
@@ -273,7 +275,28 @@ class ViewController: UIViewController {
         self.navigationController?.pushViewController(registration, animated: true)
     }
     
-
+    
+    //MARK: Validation in Login
+    func invalidCredentials(){
+        print("Alert")
+       
+            let cancelAction = UIAlertAction(title: "OK",
+                                             style: .cancel) { (action) in
+             // Respond to user selection of the action.
+            }
+            
+            // Create and configure the alert controller.
+            let alert = UIAlertController(title: "Invalid Credentials",
+                  message: "Please provide valid credentials or register for new account.",
+                  preferredStyle: .alert)
+            alert.addAction(cancelAction)
+            
+                 
+            self.present(alert, animated: true) {
+               // The alert was presented
+            }
+           
+    }
 }
 
 

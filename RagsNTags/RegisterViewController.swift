@@ -11,6 +11,29 @@ import FirebaseStorage
 import FirebaseDatabase
 import CoreData
 
+class validationAlert: UIViewController{
+    
+    func callAlerts(titles: String, messages: String){
+        
+        let cancelAction = UIAlertAction(title: "OK",
+                                         style: .cancel) { (action) in
+         // Respond to user selection of the action.
+        }
+        
+        // Create and configure the alert controller.
+        let alert = UIAlertController(title: titles,
+              message: messages,
+              preferredStyle: .alert)
+        alert.addAction(cancelAction)
+        
+             
+        self.present(alert, animated: true) {
+           // The alert was presented
+        }
+    }
+    
+}
+
 class TextFieldValidation{
     //email id validation
     func isValidEmailID(email: String) -> Bool {
@@ -139,6 +162,43 @@ class RegisterViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    //MARK: Function to call alerts if validation failed
+    func callAlerts(titles: String, messages: String){
+        
+        let cancelAction = UIAlertAction(title: "OK",
+                                         style: .cancel) { (action) in
+         // Respond to user selection of the action.
+        }
+        
+        // Create and configure the alert controller.
+        let alert = UIAlertController(title: titles,
+              message: messages,
+              preferredStyle: .alert)
+        alert.addAction(cancelAction)
+        
+             
+        self.present(alert, animated: true) {
+           // The alert was presented
+        }
+    }
+    
+    func clearField(fieldName: String){
+        switch (fieldName){
+        case "name":
+            nameTF.text = ""
+        case "email":
+            emailTF.text = ""
+        case "mobile":
+            mobileTF.text = ""
+        case "password":
+            passwordTF.text = ""
+        case "confirmPassword":
+            confirmPassTF.text = ""
+        
+        default: break
+            
+        }
+    }
     
     @IBAction func enterIsClickerToRegister(_ sender: Any) {
         let name = nameTF.text!
@@ -146,20 +206,28 @@ class RegisterViewController: UIViewController {
         let email = emailTF.text!
         let password = passwordTF.text!
         var coreDataStore: Bool?
+        //let alert = validationAlert()
         //MARK: Check if password and confirm password is same
         let val = TextFieldValidation()
         if(mobile.count != 10){
             //call alert
+            callAlerts(titles: "Invalid phone number", messages: "Please provide correct phone number.")
+            clearField(fieldName: "mobile")
             print("wrong mobile")
         }else{
             if(!val.isValidEmailID(email: email)){
                 //call alert
+                callAlerts(titles: "Invalid email ID", messages: "Please provide correct email ID.")
+                clearField(fieldName: "email")
                 print("wrong email")
             }
             else{
                 if (password == confirmPassTF.text!){
                     if(!val.isvalidpassword(password: password)){
                         //call alert
+                        callAlerts(titles: "Invalid password", messages: "Please provide correct password as per validation")
+                        clearField(fieldName: "password")
+                        clearField(fieldName: "confirmPassword")
                         print("wrong password")
                     }
                     else{
@@ -177,6 +245,9 @@ class RegisterViewController: UIViewController {
                 }
                 else{
                     //call alert
+                    callAlerts(titles: "Password does not match", messages: "Please provide correct password")
+                    clearField(fieldName: "password")
+                    clearField(fieldName: "confirmPassword")
                     print("Password does match")
                 }
             }

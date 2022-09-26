@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AlertsAndNotifications
 
 class ThankYouViewController: UIViewController {
     
@@ -18,9 +19,13 @@ class ThankYouViewController: UIViewController {
     }
     
     @IBAction func okIsClicked(_ sender: Any) {
-        let backtohome = storyboard?.instantiateViewController(withIdentifier: "dash") as! DashboardViewController
+        let not = Notifications()
+        not.sendnotice()
         
+        let backtohome = storyboard?.instantiateViewController(withIdentifier: "dash") as! DashboardViewController
+        backtohome.name = nameUser!
         self.navigationController?.pushViewController(backtohome, animated: true)
+        
     }
     
     /*

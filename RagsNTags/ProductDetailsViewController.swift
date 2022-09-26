@@ -273,6 +273,25 @@ class ProductDetailsViewController: UIViewController {
         let navHome = storyboard?.instantiateViewController(withIdentifier: "loginVC")
         self.navigationController?.pushViewController(navHome!, animated: true)
     }
+    
+    func callAlerts(titles: String, messages: String){
+        
+        let cancelAction = UIAlertAction(title: "OK",
+                                         style: .cancel) { (action) in
+         // Respond to user selection of the action.
+        }
+        
+        // Create and configure the alert controller.
+        let alert = UIAlertController(title: titles,
+              message: messages,
+              preferredStyle: .alert)
+        alert.addAction(cancelAction)
+        
+             
+        self.present(alert, animated: true) {
+           // The alert was presented
+        }
+    }
 
     @IBAction func addToCartClicked(_ sender: Any) {
         
@@ -281,6 +300,7 @@ class ProductDetailsViewController: UIViewController {
         carts.passItem = passName!
         carts.passPrice = passPrice!
         carts.passImg = passImg!
+        callAlerts(titles: "Added to cart", messages: "Your product is added to cart.")
         
         
     }

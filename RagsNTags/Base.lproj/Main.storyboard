@@ -459,9 +459,6 @@
                                                     <buttonConfiguration key="configuration" style="plain" title="">
                                                         <backgroundConfiguration key="background" image="cart"/>
                                                     </buttonConfiguration>
-                                                    <connections>
-                                                        <action selector="cartButtonClicked:" destination="MWr-q6-Yxm" eventType="touchUpInside" id="5rQ-sx-wnY"/>
-                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1064,6 +1061,17 @@
                     <view key="view" contentMode="scaleToFill" id="lMq-bP-K2j">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Opr-fU-Cfq">
+                                <rect key="frame" x="134" y="359" width="67" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                <connections>
+                                    <action selector="notice:" destination="ysP-hD-8AN" eventType="touchUpInside" id="9eb-TH-4Zt"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="hDd-d6-2wy"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
@@ -1082,6 +1090,7 @@
                         <viewLayoutGuide key="safeArea" id="HK8-mA-8YC"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="3EN-dP-PdI"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T36-UZ-YPp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1286,8 +1295,8 @@
         <image name="applogo" width="557" height="448"/>
         <image name="beauty" width="355" height="418"/>
         <image name="buy" width="111" height="65"/>
-        <image name="cart" width="248" height="203"/>
         <image name="cart" catalog="system" width="128" height="102"/>
+        <image name="cart" width="248" height="203"/>
         <image name="checklist" catalog="system" width="128" height="105"/>
         <image name="electronis" width="557" height="431"/>
         <image name="fashion" width="345" height="393"/>
