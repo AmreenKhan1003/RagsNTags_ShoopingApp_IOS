@@ -1286,8 +1286,8 @@
         <image name="applogo" width="557" height="448"/>
         <image name="beauty" width="355" height="418"/>
         <image name="buy" width="111" height="65"/>
-        <image name="cart" catalog="system" width="128" height="102"/>
         <image name="cart" width="248" height="203"/>
+        <image name="cart" catalog="system" width="128" height="102"/>
         <image name="checklist" catalog="system" width="128" height="105"/>
         <image name="electronis" width="557" height="431"/>
         <image name="fashion" width="345" height="393"/>

@@ -2,7 +2,7 @@
 //  UserRegisterData+CoreDataClass.swift
 //  
 //
-//  Created by Capgemini-DA322 on 9/21/22.
+//  Created by Capgemini-DA322 on 9/26/22.
 //
 //
 

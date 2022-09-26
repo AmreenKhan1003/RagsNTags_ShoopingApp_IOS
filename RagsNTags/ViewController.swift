@@ -11,6 +11,9 @@ import FirebaseAuth
 import CoreData
 import FirebaseStorage
 import FirebaseDatabase
+import AlertsAndNotifications
+
+public var emailIDUser: String?
 
 class CoreDataFetch{
     
@@ -47,6 +50,60 @@ class CoreDataFetch{
             
         }
     }
+    
+    func fetchData(email: String) -> UserRegisterData {
+        /*
+        var fetData: UserRegisterData?
+        var flag = 0
+        let appDelegate = (UIApplication.shared.delegate) as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+        
+
+        do{
+            let edata = try context.fetch(UserRegisterData.fetchRequest()) as! [UserRegisterData]
+            
+            for data in edata{
+                let tomatchemail = data.email
+                if(tomatchemail == email ){
+                    flag = 1
+                    //callAlert(titles: "Email Already Exist")
+                    fetData = data
+                    break
+                    //print(tomatchemail)
+                }//end of if
+            }//end for
+        }//end do
+        catch{
+            print("error occured while fetching name")
+        }
+        
+        if (flag == 1){
+            return fetData!
+        }
+        else{
+            return fetData!
+            
+        }
+    }
+         */
+        let appDelegate = (UIApplication.shared.delegate) as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+        var fetData: UserRegisterData?
+        let fetchReq : NSFetchRequest<UserRegisterData> = UserRegisterData.fetchRequest()
+        fetchReq.returnsObjectsAsFaults = false
+        let predicate = NSPredicate(format: "email == %@", email)
+        fetchReq.predicate = predicate
+        do{
+            let userDataArray = try context.fetch(fetchReq)
+            for i in 0..<userDataArray.count{
+                fetData = userDataArray[i]
+            }
+        } catch(let error){
+            print(error.localizedDescription)
+        }
+        return fetData!
+        
+}
 }
 
 class AuthenticateUser{
@@ -124,12 +181,17 @@ class AuthenticateUserFromFirebase: UIViewController{
 
 
 
+
 class ViewController: UIViewController {
+    
+    
     
     //MARK: IBOutlet on ViewController (Login page)
     @IBOutlet weak var emailTxtFld: UITextField!
     @IBOutlet weak var passwordTxtFld: UITextField!
     @IBOutlet weak var logoImg: UIImageView!
+    
+    
     
     //MARK: viewDidLoad
     override func viewDidLoad() {
@@ -137,7 +199,8 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         //authenticateUserByFace()
         
-        
+        let a = Alerts()
+        a.alert1()
         navigationItem.hidesBackButton = true
         
         //call animation
@@ -195,6 +258,8 @@ class ViewController: UIViewController {
         
         let email: String = emailTxtFld.text!
         let password: String = passwordTxtFld.text!
+        
+        emailIDUser = email
         
         //Call function to authenticate from firebase
         print(logninUserFromFirebase(emailId: email, password: password))

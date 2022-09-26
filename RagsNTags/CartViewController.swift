@@ -44,7 +44,9 @@ class CartViewController: UIViewController, UITableViewDelegate, UITableViewData
     override func viewWillAppear(_ animated: Bool) {
         
         let storeitem = CoreDataCart()
-        
+        let users = CoreDataFetch()
+        let fetchUser = users.fetchData(email: emailIDUser!)
+        if ((fetchUser.toCart?.allObjects) != nil){
         cartItems = storeitem.fetchname()
         cartItemsImg = storeitem.fetchImg()
         cartItemsPrice = storeitem.fetchPrice()
@@ -57,6 +59,7 @@ class CartViewController: UIViewController, UITableViewDelegate, UITableViewData
         print(cartItemsImg)
         
         print(storeitem.fetchname())
+        }
     }
     
     

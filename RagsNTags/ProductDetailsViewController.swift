@@ -57,7 +57,7 @@ class CoreDataCart{
     func fetchname() -> NSMutableArray {
         
         let carts = NSMutableArray()
-        
+        /*
         let appDelegate = (UIApplication.shared.delegate) as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
 
@@ -66,7 +66,10 @@ class CoreDataCart{
             
             for data in cartdata{
                 //print(data.itemName)
-                carts.add(data.itemName)
+                //if(userEmail == data.to){
+                    carts.add(data.itemName)
+                    
+                //}
                 
             }//end for
             
@@ -75,14 +78,20 @@ class CoreDataCart{
             print("error occured while fetching name")
         }
          
-        
+        */
+        let users = CoreDataFetch()
+        let fetchUser = users.fetchData(email: emailIDUser!)
+        let cartProductArray = fetchUser.toCart?.allObjects as! [CartData]
+        for i in cartProductArray{
+            carts.add(i.itemName!)
+        }
             return carts
         
     }
     
     func fetchPrice() -> NSMutableArray{
         let carts = NSMutableArray()
-        
+        /*
         let appDelegate = (UIApplication.shared.delegate) as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
 
@@ -91,7 +100,9 @@ class CoreDataCart{
             
             for data in cartdata{
                 //print(data.itemName)
+                //if(userEmail == data.touser?.email){
                 carts.add(data.itemPrice)
+                //}
                 
             }//end for
             
@@ -99,15 +110,22 @@ class CoreDataCart{
         catch{
             print("error occured while fetching Price")
         }
-         
+         */
+        let users = CoreDataFetch()
+        let fetchUser = users.fetchData(email: emailIDUser!)
+        let cartProductArray = fetchUser.toCart?.allObjects as! [CartData]
+        for i in cartProductArray{
+            carts.add(i.itemPrice!)
+        }
         
             return carts
     }
     
     func fetchImg() -> NSMutableArray{
         
-        let carts = NSMutableArray()
         
+        let carts = NSMutableArray()
+        /*
         let appDelegate = (UIApplication.shared.delegate) as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
 
@@ -116,7 +134,10 @@ class CoreDataCart{
             
             for data in cartdata{
                 //print(data.itemName)
-                carts.add(data.itemImg)
+                //if(userEmail == data.touser?.email){
+                    carts.add(data.itemImg)
+                    
+                //}
                 
             }//end for
             
@@ -125,8 +146,46 @@ class CoreDataCart{
             print("error occured while fetching name")
         }
          
-        
+        */
+        let users = CoreDataFetch()
+        let fetchUser = users.fetchData(email: emailIDUser!)
+        let cartProductArray = fetchUser.toCart?.allObjects as! [CartData]
+        for i in cartProductArray{
+            carts.add(i.itemImg!)
+        }
             return carts
+         
+    }
+    
+    func fetchUser() -> String{
+        
+        var emailCart: String?
+        let appDelegate = (UIApplication.shared.delegate) as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+
+        do{
+            let cartdata = try context.fetch(CartData.fetchRequest()) as! [CartData]
+            
+            for data in cartdata{
+                //print(data.itemName)
+                if emailIDUser == data.touser?.email{
+                    emailCart = emailIDUser
+                }
+                
+            }//end for
+            
+        }//end do
+        catch{
+            print("error occured while fetching name")
+        }
+         
+        if (emailCart != nil){
+            return emailCart!
+        }
+        else{
+            return " "
+        }
+        
     }
     
     func registerOnCoreData(name: String, price: String, img: String) -> Bool{
@@ -139,10 +198,13 @@ class CoreDataCart{
             //print(edata)
             
             //no same item is present so enter item in coreData
-            
+            let userdata = CoreDataFetch()
             itemData.itemName = name
             itemData.itemPrice = price
             itemData.itemImg = img
+            itemData.touser = userdata.fetchData(email: emailIDUser!)
+            
+            
                 do{
                     try context.save()
                     print("cart Data has been stored")

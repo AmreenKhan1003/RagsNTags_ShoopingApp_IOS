@@ -8,14 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		0618AE6728DEDF2F00B90A97 /* ProductDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0618AE6628DEDF2F00B90A97 /* ProductDetailsViewController.swift */; };
-		0618AE6E28DF519A00B90A97 /* CartData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0618AE6C28DF519A00B90A97 /* CartData+CoreDataClass.swift */; };
-		0618AE6F28DF519A00B90A97 /* CartData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0618AE6D28DF519A00B90A97 /* CartData+CoreDataProperties.swift */; };
 		0618AE7128DF8D0B00B90A97 /* CheckoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0618AE7028DF8D0B00B90A97 /* CheckoutViewController.swift */; };
 		0636AE6328DCBC5400D8447E /* SelectedCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0636AE6228DCBC5400D8447E /* SelectedCategoryViewController.swift */; };
 		06431E3428DB57600033D3CB /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06431E3328DB57600033D3CB /* DashboardViewController.swift */; };
 		06431E3628DB5CF90033D3CB /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06431E3528DB5CF90033D3CB /* RegisterViewController.swift */; };
-		06431E3D28DB7DAE0033D3CB /* UserRegisterData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06431E3C28DB7DAD0033D3CB /* UserRegisterData+CoreDataClass.swift */; };
-		06431E3E28DB7DAE0033D3CB /* UserRegisterData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06431E3B28DB7DAD0033D3CB /* UserRegisterData+CoreDataProperties.swift */; };
 		064AF79F28DB42B2001B9EA5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 064AF79E28DB42B2001B9EA5 /* GoogleService-Info.plist */; };
 		066A6D4628DAD88D00E2FD39 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 066A6D4528DAD88D00E2FD39 /* AppDelegate.swift */; };
 		066A6D4828DAD88D00E2FD39 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 066A6D4728DAD88D00E2FD39 /* SceneDelegate.swift */; };
@@ -36,6 +32,12 @@
 		068E608E28DC63B30078DF37 /* MobileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068E608D28DC63B30078DF37 /* MobileViewController.swift */; };
 		068E609028DC63EF0078DF37 /* BeautyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068E608F28DC63EF0078DF37 /* BeautyViewController.swift */; };
 		068E609228DC685F0078DF37 /* products.json in Resources */ = {isa = PBXBuildFile; fileRef = 068E609128DC685F0078DF37 /* products.json */; };
+		06BF153128E1A97C00A980DF /* UserRegisterData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06BF152F28E1A97C00A980DF /* UserRegisterData+CoreDataClass.swift */; };
+		06BF153228E1A97C00A980DF /* CartData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06BF152D28E1A97C00A980DF /* CartData+CoreDataProperties.swift */; };
+		06BF153328E1A97C00A980DF /* UserRegisterData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06BF152E28E1A97C00A980DF /* UserRegisterData+CoreDataProperties.swift */; };
+		06BF153428E1A97C00A980DF /* CartData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06BF153028E1A97C00A980DF /* CartData+CoreDataClass.swift */; };
+		06CD0EF828E18B6600F639CC /* AlertsAndNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06CD0EF528E18B3700F639CC /* AlertsAndNotifications.framework */; };
+		06CD0EF928E18B6600F639CC /* AlertsAndNotifications.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 06CD0EF528E18B3700F639CC /* AlertsAndNotifications.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		223D387B40F8CA14312E18DC /* Pods_RagsNTagsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8042D807DBB7A0D91720E8CB /* Pods_RagsNTagsTests.framework */; };
 		D32D7BCB1489856274A3C0C3 /* Pods_RagsNTags_RagsNTagsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAA792CDB5C42E45DEB1101C /* Pods_RagsNTags_RagsNTagsUITests.framework */; };
 		D56AEFFF1D435CC4FE22DC56 /* Pods_RagsNTags.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C13590E9BC074D2DB59FF36C /* Pods_RagsNTags.framework */; };
@@ -56,19 +58,58 @@
 			remoteGlobalIDString = 066A6D4128DAD88D00E2FD39;
 			remoteInfo = RagsNTags;
 		};
+		068587CB28E109E10024941B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 068587C628E109E10024941B /* NotificatoinsAndAlerts.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 068587A928E107030024941B;
+			remoteInfo = NotificatoinsAndAlerts;
+		};
+		068587CD28E109E10024941B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 068587C628E109E10024941B /* NotificatoinsAndAlerts.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 068587B328E107040024941B;
+			remoteInfo = NotificatoinsAndAlertsTests;
+		};
+		06CD0EF428E18B3700F639CC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 06CD0EEF28E18B3700F639CC /* AlertsAndNotifications.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 06CD0ED328E18AA500F639CC;
+			remoteInfo = AlertsAndNotifications;
+		};
+		06CD0EF628E18B3700F639CC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 06CD0EEF28E18B3700F639CC /* AlertsAndNotifications.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 06CD0EDD28E18AA500F639CC;
+			remoteInfo = AlertsAndNotificationsTests;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		06CD0EFA28E18B6700F639CC /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				06CD0EF928E18B6600F639CC /* AlertsAndNotifications.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		02BE0DD31F5E9B81D3ADD507 /* Pods-RagsNTags-RagsNTagsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RagsNTags-RagsNTagsUITests.debug.xcconfig"; path = "Target Support Files/Pods-RagsNTags-RagsNTagsUITests/Pods-RagsNTags-RagsNTagsUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		0618AE6628DEDF2F00B90A97 /* ProductDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsViewController.swift; sourceTree = "<group>"; };
-		0618AE6C28DF519A00B90A97 /* CartData+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CartData+CoreDataClass.swift"; path = "/Users/capgemini-da322/Documents/sprint2/RagsNTags/RagsNTags/CartData+CoreDataClass.swift"; sourceTree = "<absolute>"; };
-		0618AE6D28DF519A00B90A97 /* CartData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CartData+CoreDataProperties.swift"; path = "/Users/capgemini-da322/Documents/sprint2/RagsNTags/RagsNTags/CartData+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
 		0618AE7028DF8D0B00B90A97 /* CheckoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutViewController.swift; sourceTree = "<group>"; };
 		0636AE6228DCBC5400D8447E /* SelectedCategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedCategoryViewController.swift; sourceTree = "<group>"; };
+		063CB36F28E1111700327213 /* AlertsAndNotifications */ = {isa = PBXFileReference; lastKnownFileType = folder; name = AlertsAndNotifications; path = ../AlertsAndNotifications; sourceTree = "<group>"; };
 		06431E3328DB57600033D3CB /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		06431E3528DB5CF90033D3CB /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
-		06431E3B28DB7DAD0033D3CB /* UserRegisterData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UserRegisterData+CoreDataProperties.swift"; path = "/Users/capgemini-da322/Documents/sprint2/RagsNTags/RagsNTags/UserRegisterData+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
-		06431E3C28DB7DAD0033D3CB /* UserRegisterData+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UserRegisterData+CoreDataClass.swift"; path = "/Users/capgemini-da322/Documents/sprint2/RagsNTags/RagsNTags/UserRegisterData+CoreDataClass.swift"; sourceTree = "<absolute>"; };
 		064AF79E28DB42B2001B9EA5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		066A6D4228DAD88D00E2FD39 /* RagsNTags.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RagsNTags.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		066A6D4528DAD88D00E2FD39 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -86,6 +127,8 @@
 		066A6D6B28DAD88F00E2FD39 /* RagsNTagsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RagsNTagsUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		0685879B28E0CB550024941B /* MapUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapUserViewController.swift; sourceTree = "<group>"; };
 		0685879D28E0D46A0024941B /* ThankYouViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThankYouViewController.swift; sourceTree = "<group>"; };
+		068587C328E108520024941B /* NotificatoinsAndAlerts */ = {isa = PBXFileReference; lastKnownFileType = folder; name = NotificatoinsAndAlerts; path = ../NotificatoinsAndAlerts; sourceTree = "<group>"; };
+		068587C628E109E10024941B /* NotificatoinsAndAlerts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = NotificatoinsAndAlerts.xcodeproj; path = ../NotificatoinsAndAlerts/NotificatoinsAndAlerts.xcodeproj; sourceTree = "<group>"; };
 		068B77E728DDE79000D6A079 /* CategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewController.swift; sourceTree = "<group>"; };
 		068B77E928DDE7D300D6A079 /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
 		068E608928DC63100078DF37 /* GroceriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceriesViewController.swift; sourceTree = "<group>"; };
@@ -93,6 +136,11 @@
 		068E608D28DC63B30078DF37 /* MobileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileViewController.swift; sourceTree = "<group>"; };
 		068E608F28DC63EF0078DF37 /* BeautyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeautyViewController.swift; sourceTree = "<group>"; };
 		068E609128DC685F0078DF37 /* products.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = products.json; sourceTree = "<group>"; };
+		06BF152D28E1A97C00A980DF /* CartData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CartData+CoreDataProperties.swift"; path = "/Users/capgemini-da322/Documents/sprint2/RagsNTags/RagsNTags/CartData+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
+		06BF152E28E1A97C00A980DF /* UserRegisterData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UserRegisterData+CoreDataProperties.swift"; path = "/Users/capgemini-da322/Documents/sprint2/RagsNTags/RagsNTags/UserRegisterData+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
+		06BF152F28E1A97C00A980DF /* UserRegisterData+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UserRegisterData+CoreDataClass.swift"; path = "/Users/capgemini-da322/Documents/sprint2/RagsNTags/RagsNTags/UserRegisterData+CoreDataClass.swift"; sourceTree = "<absolute>"; };
+		06BF153028E1A97C00A980DF /* CartData+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CartData+CoreDataClass.swift"; path = "/Users/capgemini-da322/Documents/sprint2/RagsNTags/RagsNTags/CartData+CoreDataClass.swift"; sourceTree = "<absolute>"; };
+		06CD0EEF28E18B3700F639CC /* AlertsAndNotifications.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AlertsAndNotifications.xcodeproj; path = ../../AlertsAndNotifications/AlertsAndNotifications.xcodeproj; sourceTree = "<group>"; };
 		612766A4A5A465A1976BB513 /* Pods-RagsNTags-RagsNTagsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RagsNTags-RagsNTagsUITests.release.xcconfig"; path = "Target Support Files/Pods-RagsNTags-RagsNTagsUITests/Pods-RagsNTags-RagsNTagsUITests.release.xcconfig"; sourceTree = "<group>"; };
 		667B93D24C6BD405956A4D2B /* Pods-RagsNTags.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RagsNTags.debug.xcconfig"; path = "Target Support Files/Pods-RagsNTags/Pods-RagsNTags.debug.xcconfig"; sourceTree = "<group>"; };
 		784B326E142630F000D0108C /* Pods-RagsNTagsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RagsNTagsTests.debug.xcconfig"; path = "Target Support Files/Pods-RagsNTagsTests/Pods-RagsNTagsTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -108,6 +156,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06CD0EF828E18B6600F639CC /* AlertsAndNotifications.framework in Frameworks */,
 				D56AEFFF1D435CC4FE22DC56 /* Pods_RagsNTags.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -156,11 +205,12 @@
 		066A6D4428DAD88D00E2FD39 /* RagsNTags */ = {
 			isa = PBXGroup;
 			children = (
-				0618AE6C28DF519A00B90A97 /* CartData+CoreDataClass.swift */,
-				0618AE6D28DF519A00B90A97 /* CartData+CoreDataProperties.swift */,
+				06BF152F28E1A97C00A980DF /* UserRegisterData+CoreDataClass.swift */,
+				06BF152E28E1A97C00A980DF /* UserRegisterData+CoreDataProperties.swift */,
+				06BF153028E1A97C00A980DF /* CartData+CoreDataClass.swift */,
+				06BF152D28E1A97C00A980DF /* CartData+CoreDataProperties.swift */,
+				06CD0EEF28E18B3700F639CC /* AlertsAndNotifications.xcodeproj */,
 				066A6D4528DAD88D00E2FD39 /* AppDelegate.swift */,
-				06431E3C28DB7DAD0033D3CB /* UserRegisterData+CoreDataClass.swift */,
-				06431E3B28DB7DAD0033D3CB /* UserRegisterData+CoreDataProperties.swift */,
 				066A6D4728DAD88D00E2FD39 /* SceneDelegate.swift */,
 				066A6D4928DAD88D00E2FD39 /* ViewController.swift */,
 				066A6D4B28DAD88D00E2FD39 /* Main.storyboard */,
@@ -204,9 +254,30 @@
 			path = RagsNTagsUITests;
 			sourceTree = "<group>";
 		};
+		068587C728E109E10024941B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				068587CC28E109E10024941B /* NotificatoinsAndAlerts.framework */,
+				068587CE28E109E10024941B /* NotificatoinsAndAlertsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		06CD0EF028E18B3700F639CC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				06CD0EF528E18B3700F639CC /* AlertsAndNotifications.framework */,
+				06CD0EF728E18B3700F639CC /* AlertsAndNotificationsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		36DC90D8F9F5120F0503E0FE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				063CB36F28E1111700327213 /* AlertsAndNotifications */,
+				068587C628E109E10024941B /* NotificatoinsAndAlerts.xcodeproj */,
+				068587C328E108520024941B /* NotificatoinsAndAlerts */,
 				C13590E9BC074D2DB59FF36C /* Pods_RagsNTags.framework */,
 				EAA792CDB5C42E45DEB1101C /* Pods_RagsNTags_RagsNTagsUITests.framework */,
 				8042D807DBB7A0D91720E8CB /* Pods_RagsNTagsTests.framework */,
@@ -239,6 +310,7 @@
 				066A6D3F28DAD88D00E2FD39 /* Frameworks */,
 				066A6D4028DAD88D00E2FD39 /* Resources */,
 				902B0D8B0602FB34C30D4E34 /* [CP] Embed Pods Frameworks */,
+				06CD0EFA28E18B6700F639CC /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -322,6 +394,16 @@
 			mainGroup = 066A6D3928DAD88D00E2FD39;
 			productRefGroup = 066A6D4328DAD88D00E2FD39 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 06CD0EF028E18B3700F639CC /* Products */;
+					ProjectRef = 06CD0EEF28E18B3700F639CC /* AlertsAndNotifications.xcodeproj */;
+				},
+				{
+					ProductGroup = 068587C728E109E10024941B /* Products */;
+					ProjectRef = 068587C628E109E10024941B /* NotificatoinsAndAlerts.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				066A6D4128DAD88D00E2FD39 /* RagsNTags */,
@@ -330,6 +412,37 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		068587CC28E109E10024941B /* NotificatoinsAndAlerts.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = NotificatoinsAndAlerts.framework;
+			remoteRef = 068587CB28E109E10024941B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		068587CE28E109E10024941B /* NotificatoinsAndAlertsTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = NotificatoinsAndAlertsTests.xctest;
+			remoteRef = 068587CD28E109E10024941B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		06CD0EF528E18B3700F639CC /* AlertsAndNotifications.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = AlertsAndNotifications.framework;
+			remoteRef = 06CD0EF428E18B3700F639CC /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		06CD0EF728E18B3700F639CC /* AlertsAndNotificationsTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = AlertsAndNotificationsTests.xctest;
+			remoteRef = 06CD0EF628E18B3700F639CC /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		066A6D4028DAD88D00E2FD39 /* Resources */ = {
@@ -469,24 +582,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				066A6D5028DAD88D00E2FD39 /* RagsNTags.xcdatamodeld in Sources */,
-				06431E3D28DB7DAE0033D3CB /* UserRegisterData+CoreDataClass.swift in Sources */,
 				0636AE6328DCBC5400D8447E /* SelectedCategoryViewController.swift in Sources */,
 				0685879E28E0D46A0024941B /* ThankYouViewController.swift in Sources */,
 				068E609028DC63EF0078DF37 /* BeautyViewController.swift in Sources */,
 				066A6D4A28DAD88D00E2FD39 /* ViewController.swift in Sources */,
-				0618AE6F28DF519A00B90A97 /* CartData+CoreDataProperties.swift in Sources */,
 				068E608A28DC63100078DF37 /* GroceriesViewController.swift in Sources */,
+				06BF153228E1A97C00A980DF /* CartData+CoreDataProperties.swift in Sources */,
 				06431E3428DB57600033D3CB /* DashboardViewController.swift in Sources */,
 				068E608E28DC63B30078DF37 /* MobileViewController.swift in Sources */,
 				06431E3628DB5CF90033D3CB /* RegisterViewController.swift in Sources */,
 				0685879C28E0CB550024941B /* MapUserViewController.swift in Sources */,
-				06431E3E28DB7DAE0033D3CB /* UserRegisterData+CoreDataProperties.swift in Sources */,
-				0618AE6E28DF519A00B90A97 /* CartData+CoreDataClass.swift in Sources */,
 				066A6D4628DAD88D00E2FD39 /* AppDelegate.swift in Sources */,
 				068B77EA28DDE7D300D6A079 /* CartViewController.swift in Sources */,
+				06BF153428E1A97C00A980DF /* CartData+CoreDataClass.swift in Sources */,
 				0618AE7128DF8D0B00B90A97 /* CheckoutViewController.swift in Sources */,
+				06BF153128E1A97C00A980DF /* UserRegisterData+CoreDataClass.swift in Sources */,
 				066A6D4828DAD88D00E2FD39 /* SceneDelegate.swift in Sources */,
 				068E608C28DC63510078DF37 /* FashionViewController.swift in Sources */,
+				06BF153328E1A97C00A980DF /* UserRegisterData+CoreDataProperties.swift in Sources */,
 				068B77E828DDE79000D6A079 /* CategoriesViewController.swift in Sources */,
 				0618AE6728DEDF2F00B90A97 /* ProductDetailsViewController.swift in Sources */,
 			);
@@ -668,6 +781,9 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = RagsNTags/Info.plist;
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "Allow to use face id";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "allow app to always know your location";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "allow app to know your current location";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -696,6 +812,9 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = RagsNTags/Info.plist;
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "Allow to use face id";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "allow app to always know your location";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "allow app to know your current location";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

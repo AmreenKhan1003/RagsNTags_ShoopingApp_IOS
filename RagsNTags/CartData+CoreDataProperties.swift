@@ -2,7 +2,7 @@
 //  CartData+CoreDataProperties.swift
 //  
 //
-//  Created by Capgemini-DA322 on 9/24/22.
+//  Created by Capgemini-DA322 on 9/26/22.
 //
 //
 
@@ -16,8 +16,9 @@ extension CartData {
         return NSFetchRequest<CartData>(entityName: "CartData")
     }
 
+    @NSManaged public var itemImg: String?
     @NSManaged public var itemName: String?
     @NSManaged public var itemPrice: String?
-    @NSManaged public var itemImg: String?
+    @NSManaged public var touser: UserRegisterData?
 
 }

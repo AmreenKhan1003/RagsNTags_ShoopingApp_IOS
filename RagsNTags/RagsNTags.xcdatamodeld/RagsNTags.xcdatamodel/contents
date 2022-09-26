@@ -4,15 +4,17 @@
         <attribute name="itemImg" optional="YES" attributeType="String"/>
         <attribute name="itemName" optional="YES" attributeType="String"/>
         <attribute name="itemPrice" optional="YES" attributeType="String"/>
+        <relationship name="touser" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="UserRegisterData" inverseName="toCart" inverseEntity="UserRegisterData"/>
     </entity>
     <entity name="UserRegisterData" representedClassName=".UserRegisterData" syncable="YES">
         <attribute name="email" optional="YES" attributeType="String"/>
         <attribute name="mobile" optional="YES" attributeType="String"/>
         <attribute name="name" optional="YES" attributeType="String"/>
         <attribute name="password" optional="YES" attributeType="String"/>
+        <relationship name="toCart" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CartData" inverseName="touser" inverseEntity="CartData"/>
     </entity>
     <elements>
-        <element name="UserRegisterData" positionX="-63" positionY="-18" width="128" height="89"/>
-        <element name="CartData" positionX="-63" positionY="9" width="128" height="74"/>
+        <element name="CartData" positionX="-63" positionY="9" width="128" height="103"/>
+        <element name="UserRegisterData" positionX="-306" positionY="-24" width="128" height="118"/>
     </elements>
 </model>
