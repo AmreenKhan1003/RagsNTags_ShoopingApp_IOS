@@ -9,6 +9,11 @@ import UIKit
 
 class DashboardViewController: UIViewController {
     
+    @IBOutlet weak var groceriesButton: UIButton!
+    @IBOutlet weak var beautyButton: UIButton!
+    @IBOutlet weak var elecButton: UIButton!
+    @IBOutlet weak var fashionButton: UIButton!
+    
     @IBOutlet weak var nameLabel: UILabel!
     var name: String?
     

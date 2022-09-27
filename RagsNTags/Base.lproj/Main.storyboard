@@ -260,6 +260,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="tCD-UY-6Wp"/>
                     <connections>
+                        <outlet property="beautyButton" destination="n6d-SK-peO" id="Md2-hL-Z2y"/>
+                        <outlet property="elecButton" destination="BeJ-Tu-1fc" id="AGG-7Z-xAb"/>
+                        <outlet property="fashionButton" destination="8fg-1I-GpG" id="r89-M3-8qW"/>
+                        <outlet property="groceriesButton" destination="d4T-Bv-niK" id="IIk-rF-QJA"/>
                         <outlet property="nameLabel" destination="ZAv-UY-bNn" id="i5U-ql-SH4"/>
                     </connections>
                 </viewController>

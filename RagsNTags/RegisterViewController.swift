@@ -107,14 +107,18 @@ class RegisterUserOnCoreData: UIViewController{
 class RegisterUserOnFirebase{
     
     //func for registering data on firebase
-    func registerOnFirebase(emailid: String, password: String){
+    func registerOnFirebase(emailid: String, password: String)-> Bool{
+        var flag: Bool = false
         Auth.auth().createUser(withEmail: emailid, password: password) { result, error in
             if let _error = error{
                 print(_error.localizedDescription)
+                flag = true
             }else{
+                flag = false
                 print("User registered")
             }
         }
+        return flag
     }//END of func
 }//END of RegisterUserOnFirebase
 

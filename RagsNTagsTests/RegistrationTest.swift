@@ -32,13 +32,13 @@ class RegistrationTest: XCTestCase {
     //Test register on coredata
     func testRegisterOnCoreData(){
         let registercore = RegisterUserOnCoreData()
-        XCTAssertTrue(registercore.registerOnCoreData(name: "Dummy", mobile: "1111111111", email: "dummy@gmail.com", password: "Dummy786"))
+        XCTAssertTrue(registercore.registerOnCoreData(name: "test", mobile: "1111111111", email: "test@gmail.com", password: "Dummy786"))
     }
     
     //Test register on Forebase
     func testRegisterOnFirebase(){
         let registerfirebase = RegisterUserOnFirebase()
-        XCTAssertTrue(registerfirebase.registerOnFirebase(emailid: "Dummy", password: "Dummy786"))
+        XCTAssertFalse(registerfirebase.registerOnFirebase(emailid: "Dummy1", password: "Dummy786"))
     }
     
     func testPerformanceExample() throws {
