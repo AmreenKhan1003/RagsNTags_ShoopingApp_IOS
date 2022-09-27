@@ -11,31 +11,10 @@ import FirebaseStorage
 import FirebaseDatabase
 import CoreData
 
-class validationAlert: UIViewController{
-    
-    func callAlerts(titles: String, messages: String){
-        
-        let cancelAction = UIAlertAction(title: "OK",
-                                         style: .cancel) { (action) in
-         // Respond to user selection of the action.
-        }
-        
-        // Create and configure the alert controller.
-        let alert = UIAlertController(title: titles,
-              message: messages,
-              preferredStyle: .alert)
-        alert.addAction(cancelAction)
-        
-             
-        self.present(alert, animated: true) {
-           // The alert was presented
-        }
-    }
-    
-}
-
+//MARK: class TextFieldValidation for validating text
 class TextFieldValidation{
-    //email id validation
+    
+    //func email id validation
     func isValidEmailID(email: String) -> Bool {
         var result = true
         let emailRegEx = "[A-Z0-9a-z.-_]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,3}"
@@ -47,8 +26,7 @@ class TextFieldValidation{
                 result = false
             }
             
-        }
-        catch (let error as NSError){
+        }catch (let error as NSError){
             result = false
             print(error.localizedDescription)
         }
@@ -57,7 +35,7 @@ class TextFieldValidation{
     } //end of email id validation
     
     //Password validation
-    func isvalidpassword(password: String) -> Bool{
+    func isValidPassword(password: String) -> Bool{
         var result = true
         let passwordRegEx = "(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])[a-zA-Z0-9]{6,}"
         do{
@@ -68,34 +46,31 @@ class TextFieldValidation{
                 result = false
             }
             
-        }
-        catch (let error as NSError){
+        }catch (let error as NSError){
             result = false
             print(error.localizedDescription)
         }
         return result
-    }       //end of password validation
-}
-
-class RegisterUserOnCoreData{
+    }//END of func password validation
     
+}//END of class
+
+//MARK: class RegisterUserOnCoreData
+class RegisterUserOnCoreData: UIViewController{
+    //func to register data on coreData
     func registerOnCoreData(name: String, mobile: String, email: String, password: String) -> Bool{
     let appDelegate = (UIApplication.shared.delegate) as! AppDelegate
     let context = appDelegate.persistentContainer.viewContext
-        let userData = NSEntityDescription.insertNewObject(forEntityName: "UserRegisterData", into: context) as! UserRegisterData
-        //check if provided email already exist in coreData
-        //flag = 1 if exist email flag = 0 if not exist
+    let userData = NSEntityDescription.insertNewObject(forEntityName: "UserRegisterData", into: context) as! UserRegisterData
+        
         var flag = 0
         do{
             let edata = try context.fetch(UserRegisterData.fetchRequest()) as! [UserRegisterData]
-            //print(edata)
             for data in edata{
                 let tomatchemail = data.email
-                
                 if(tomatchemail == email ){
                     //email exist
                     flag = 1
-                    //callAlert(titles: "Email Already Exist")
                     break
                     //print(tomatchemail)
                 }
@@ -110,43 +85,38 @@ class RegisterUserOnCoreData{
                     try context.save()
                     print("Data has been stored")
                     return true
-                }
-                catch {
+                }catch {
                     print("Cant load")
                     return false
                 }
-                //if registration is completed
-                //print("Done")
-            }
-            else{
-                //flag is 1 than email exist
-                //callAlert(titles: "Email exist")
-                //clearField(fieldName: "email")
+                
+            }else{
                 print("email exist")
                 return false
             }
-        }
-        catch{
-            print("Error occured while storing data")
+        }catch{
+            print("Error occured while storing user register data in CoreData")
             return false
-        }
-        
-    }
-}
+        }//END of catch
+    }//END of func
+    
+}//END of class RegisterUserOnCoreData
 
+
+//MARK: class RegisterUserOnFirebase
 class RegisterUserOnFirebase{
     
+    //func for registering data on firebase
     func registerOnFirebase(emailid: String, password: String){
         Auth.auth().createUser(withEmail: emailid, password: password) { result, error in
             if let _error = error{
                 print(_error.localizedDescription)
-            }
-            else{
+            }else{
                 print("User registered")
             }
         }
-    }
-}
+    }//END of func
+}//END of RegisterUserOnFirebase
 
 class RegisterViewController: UIViewController {
 
@@ -158,30 +128,25 @@ class RegisterViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
     //MARK: Function to call alerts if validation failed
     func callAlerts(titles: String, messages: String){
         
-        let cancelAction = UIAlertAction(title: "OK",
-                                         style: .cancel) { (action) in
-         // Respond to user selection of the action.
+        let cancelAction = UIAlertAction(title: "OK", style: .cancel)
+        { (action) in
         }
         
         // Create and configure the alert controller.
-        let alert = UIAlertController(title: titles,
-              message: messages,
-              preferredStyle: .alert)
+        let alert = UIAlertController(title: titles, message: messages, preferredStyle: .alert)
         alert.addAction(cancelAction)
         
-             
         self.present(alert, animated: true) {
            // The alert was presented
         }
-    }
+    }//END of func callAlert
     
+    //MARK: Function clearField to clear the textField wiith invalid credentials
     func clearField(fieldName: String){
         switch (fieldName){
         case "name":
@@ -198,63 +163,66 @@ class RegisterViewController: UIViewController {
         default: break
             
         }
-    }
+    }//END of func clearField
     
+    //MARK: IBAction when user submit the entered data
     @IBAction func enterIsClickerToRegister(_ sender: Any) {
         let name = nameTF.text!
         let mobile = mobileTF.text!
         let email = emailTF.text!
         let password = passwordTF.text!
         var coreDataStore: Bool?
-        //let alert = validationAlert()
+        
         //MARK: Check if password and confirm password is same
         let val = TextFieldValidation()
-        if(mobile.count != 10){
-            //call alert
+        
+        if(name.count < 4){
+            callAlerts(titles: "Invalid name", messages: "Please provide First name and Last name")
+            clearField(fieldName: "name")
+        }else{
+            if(mobile.count != 10){
             callAlerts(titles: "Invalid phone number", messages: "Please provide correct phone number.")
             clearField(fieldName: "mobile")
             print("wrong mobile")
-        }else{
-            if(!val.isValidEmailID(email: email)){
-                //call alert
-                callAlerts(titles: "Invalid email ID", messages: "Please provide correct email ID.")
+            }else{
+                if(!val.isValidEmailID(email: email)){
+                callAlerts(titles: "Invalid email ID", messages: "Please provide correct email ID in format abc.xyz.com.")
                 clearField(fieldName: "email")
                 print("wrong email")
-            }
-            else{
-                if (password == confirmPassTF.text!){
-                    if(!val.isvalidpassword(password: password)){
-                        //call alert
-                        callAlerts(titles: "Invalid password", messages: "Please provide correct password as per validation")
+                    
+                }else{
+                    if (password == confirmPassTF.text!){
+                        if(!val.isValidPassword(password: password)){
+                            callAlerts(titles: "Invalid password", messages: "Please provide correct password with Capital letters and numbers and it should be more than or equal to 6 character long")
+                            clearField(fieldName: "password")
+                            clearField(fieldName: "confirmPassword")
+                            print("wrong password")
+                        }else{
+                        //check user email exist using coreData
+                            let regCore = RegisterUserOnCoreData()
+                            coreDataStore = regCore.registerOnCoreData(name: name, mobile: mobile, email: email, password: password)
+                            if(coreDataStore == true){
+                            //store data in firebase
+                                let regFirebase = RegisterUserOnFirebase()
+                                regFirebase.registerOnFirebase(emailid: email, password: password)
+                                let login = self.storyboard?.instantiateViewController(withIdentifier: "loginVC")
+                                self.navigationController?.pushViewController(login!, animated: true)
+                            }else{
+                                //if email exist
+                                callAlerts(titles: "Email exist", messages: "Provided email is already in use, please login or register using new email address.")
+                                clearField(fieldName: "email")
+                            }
+                            
+                        }
+                    }else{
+                        callAlerts(titles: "Password does not match", messages: "Please provide correct password")
                         clearField(fieldName: "password")
                         clearField(fieldName: "confirmPassword")
-                        print("wrong password")
+                        print("Password does match")
                     }
-                    else{
-                        //check user email exist using coreData
-                        let regCore = RegisterUserOnCoreData()
-                        coreDataStore = regCore.registerOnCoreData(name: name, mobile: mobile, email: email, password: password)
-                        if(coreDataStore == true){
-                            //store data in firebase
-                            let regFirebase = RegisterUserOnFirebase()
-                            regFirebase.registerOnFirebase(emailid: email, password: password)
-                            let login = self.storyboard?.instantiateViewController(withIdentifier: "loginVC")
-                            self.navigationController?.pushViewController(login!, animated: true)
-                        }
-                    }
-                }
-                else{
-                    //call alert
-                    callAlerts(titles: "Password does not match", messages: "Please provide correct password")
-                    clearField(fieldName: "password")
-                    clearField(fieldName: "confirmPassword")
-                    print("Password does match")
                 }
             }
         }
-            
-        
-        
-    }
+    }//END of if
     
-}
+}//END of IBAction

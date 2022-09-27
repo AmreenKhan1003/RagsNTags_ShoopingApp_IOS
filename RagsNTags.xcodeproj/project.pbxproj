@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		0618AE6728DEDF2F00B90A97 /* ProductDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0618AE6628DEDF2F00B90A97 /* ProductDetailsViewController.swift */; };
 		0618AE7128DF8D0B00B90A97 /* CheckoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0618AE7028DF8D0B00B90A97 /* CheckoutViewController.swift */; };
+		061DB76528E2EB44009DAC1C /* DummyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061DB76428E2EB44009DAC1C /* DummyViewController.swift */; };
+		061DB76928E304FF009DAC1C /* RegistrationTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061DB76828E304FF009DAC1C /* RegistrationTest.swift */; };
+		063091D328E2E2B0002620BD /* LoginTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063091D228E2E2B0002620BD /* LoginTest.swift */; };
 		0636AE6328DCBC5400D8447E /* SelectedCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0636AE6228DCBC5400D8447E /* SelectedCategoryViewController.swift */; };
 		06431E3428DB57600033D3CB /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06431E3328DB57600033D3CB /* DashboardViewController.swift */; };
 		06431E3628DB5CF90033D3CB /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06431E3528DB5CF90033D3CB /* RegisterViewController.swift */; };
@@ -27,10 +30,6 @@
 		0685879E28E0D46A0024941B /* ThankYouViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0685879D28E0D46A0024941B /* ThankYouViewController.swift */; };
 		068B77E828DDE79000D6A079 /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068B77E728DDE79000D6A079 /* CategoriesViewController.swift */; };
 		068B77EA28DDE7D300D6A079 /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068B77E928DDE7D300D6A079 /* CartViewController.swift */; };
-		068E608A28DC63100078DF37 /* GroceriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068E608928DC63100078DF37 /* GroceriesViewController.swift */; };
-		068E608C28DC63510078DF37 /* FashionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068E608B28DC63510078DF37 /* FashionViewController.swift */; };
-		068E608E28DC63B30078DF37 /* MobileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068E608D28DC63B30078DF37 /* MobileViewController.swift */; };
-		068E609028DC63EF0078DF37 /* BeautyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068E608F28DC63EF0078DF37 /* BeautyViewController.swift */; };
 		068E609228DC685F0078DF37 /* products.json in Resources */ = {isa = PBXBuildFile; fileRef = 068E609128DC685F0078DF37 /* products.json */; };
 		06BF153128E1A97C00A980DF /* UserRegisterData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06BF152F28E1A97C00A980DF /* UserRegisterData+CoreDataClass.swift */; };
 		06BF153228E1A97C00A980DF /* CartData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06BF152D28E1A97C00A980DF /* CartData+CoreDataProperties.swift */; };
@@ -106,6 +105,9 @@
 		02BE0DD31F5E9B81D3ADD507 /* Pods-RagsNTags-RagsNTagsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RagsNTags-RagsNTagsUITests.debug.xcconfig"; path = "Target Support Files/Pods-RagsNTags-RagsNTagsUITests/Pods-RagsNTags-RagsNTagsUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		0618AE6628DEDF2F00B90A97 /* ProductDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsViewController.swift; sourceTree = "<group>"; };
 		0618AE7028DF8D0B00B90A97 /* CheckoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutViewController.swift; sourceTree = "<group>"; };
+		061DB76428E2EB44009DAC1C /* DummyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyViewController.swift; sourceTree = "<group>"; };
+		061DB76828E304FF009DAC1C /* RegistrationTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationTest.swift; sourceTree = "<group>"; };
+		063091D228E2E2B0002620BD /* LoginTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTest.swift; sourceTree = "<group>"; };
 		0636AE6228DCBC5400D8447E /* SelectedCategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedCategoryViewController.swift; sourceTree = "<group>"; };
 		063CB36F28E1111700327213 /* AlertsAndNotifications */ = {isa = PBXFileReference; lastKnownFileType = folder; name = AlertsAndNotifications; path = ../AlertsAndNotifications; sourceTree = "<group>"; };
 		06431E3328DB57600033D3CB /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
@@ -131,10 +133,6 @@
 		068587C628E109E10024941B /* NotificatoinsAndAlerts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = NotificatoinsAndAlerts.xcodeproj; path = ../NotificatoinsAndAlerts/NotificatoinsAndAlerts.xcodeproj; sourceTree = "<group>"; };
 		068B77E728DDE79000D6A079 /* CategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewController.swift; sourceTree = "<group>"; };
 		068B77E928DDE7D300D6A079 /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
-		068E608928DC63100078DF37 /* GroceriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceriesViewController.swift; sourceTree = "<group>"; };
-		068E608B28DC63510078DF37 /* FashionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FashionViewController.swift; sourceTree = "<group>"; };
-		068E608D28DC63B30078DF37 /* MobileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileViewController.swift; sourceTree = "<group>"; };
-		068E608F28DC63EF0078DF37 /* BeautyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeautyViewController.swift; sourceTree = "<group>"; };
 		068E609128DC685F0078DF37 /* products.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = products.json; sourceTree = "<group>"; };
 		06BF152D28E1A97C00A980DF /* CartData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CartData+CoreDataProperties.swift"; path = "/Users/capgemini-da322/Documents/sprint2/RagsNTags/RagsNTags/CartData+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
 		06BF152E28E1A97C00A980DF /* UserRegisterData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UserRegisterData+CoreDataProperties.swift"; path = "/Users/capgemini-da322/Documents/sprint2/RagsNTags/RagsNTags/UserRegisterData+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
@@ -222,10 +220,6 @@
 				066A6D4E28DAD88D00E2FD39 /* RagsNTags.xcdatamodeld */,
 				06431E3328DB57600033D3CB /* DashboardViewController.swift */,
 				06431E3528DB5CF90033D3CB /* RegisterViewController.swift */,
-				068E608928DC63100078DF37 /* GroceriesViewController.swift */,
-				068E608B28DC63510078DF37 /* FashionViewController.swift */,
-				068E608D28DC63B30078DF37 /* MobileViewController.swift */,
-				068E608F28DC63EF0078DF37 /* BeautyViewController.swift */,
 				0636AE6228DCBC5400D8447E /* SelectedCategoryViewController.swift */,
 				068B77E728DDE79000D6A079 /* CategoriesViewController.swift */,
 				068B77E928DDE7D300D6A079 /* CartViewController.swift */,
@@ -233,6 +227,7 @@
 				0618AE7028DF8D0B00B90A97 /* CheckoutViewController.swift */,
 				0685879B28E0CB550024941B /* MapUserViewController.swift */,
 				0685879D28E0D46A0024941B /* ThankYouViewController.swift */,
+				061DB76428E2EB44009DAC1C /* DummyViewController.swift */,
 			);
 			path = RagsNTags;
 			sourceTree = "<group>";
@@ -241,6 +236,8 @@
 			isa = PBXGroup;
 			children = (
 				066A6D5F28DAD88F00E2FD39 /* RagsNTagsTests.swift */,
+				061DB76828E304FF009DAC1C /* RegistrationTest.swift */,
+				063091D228E2E2B0002620BD /* LoginTest.swift */,
 			);
 			path = RagsNTagsTests;
 			sourceTree = "<group>";
@@ -584,12 +581,9 @@
 				066A6D5028DAD88D00E2FD39 /* RagsNTags.xcdatamodeld in Sources */,
 				0636AE6328DCBC5400D8447E /* SelectedCategoryViewController.swift in Sources */,
 				0685879E28E0D46A0024941B /* ThankYouViewController.swift in Sources */,
-				068E609028DC63EF0078DF37 /* BeautyViewController.swift in Sources */,
 				066A6D4A28DAD88D00E2FD39 /* ViewController.swift in Sources */,
-				068E608A28DC63100078DF37 /* GroceriesViewController.swift in Sources */,
 				06BF153228E1A97C00A980DF /* CartData+CoreDataProperties.swift in Sources */,
 				06431E3428DB57600033D3CB /* DashboardViewController.swift in Sources */,
-				068E608E28DC63B30078DF37 /* MobileViewController.swift in Sources */,
 				06431E3628DB5CF90033D3CB /* RegisterViewController.swift in Sources */,
 				0685879C28E0CB550024941B /* MapUserViewController.swift in Sources */,
 				066A6D4628DAD88D00E2FD39 /* AppDelegate.swift in Sources */,
@@ -597,8 +591,8 @@
 				06BF153428E1A97C00A980DF /* CartData+CoreDataClass.swift in Sources */,
 				0618AE7128DF8D0B00B90A97 /* CheckoutViewController.swift in Sources */,
 				06BF153128E1A97C00A980DF /* UserRegisterData+CoreDataClass.swift in Sources */,
+				061DB76528E2EB44009DAC1C /* DummyViewController.swift in Sources */,
 				066A6D4828DAD88D00E2FD39 /* SceneDelegate.swift in Sources */,
-				068E608C28DC63510078DF37 /* FashionViewController.swift in Sources */,
 				06BF153328E1A97C00A980DF /* UserRegisterData+CoreDataProperties.swift in Sources */,
 				068B77E828DDE79000D6A079 /* CategoriesViewController.swift in Sources */,
 				0618AE6728DEDF2F00B90A97 /* ProductDetailsViewController.swift in Sources */,
@@ -610,6 +604,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				066A6D6028DAD88F00E2FD39 /* RagsNTagsTests.swift in Sources */,
+				063091D328E2E2B0002620BD /* LoginTest.swift in Sources */,
+				061DB76928E304FF009DAC1C /* RegistrationTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

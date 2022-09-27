@@ -15,6 +15,30 @@ import AlertsAndNotifications
 
 public var emailIDUser: String?
 public var nameUser: String?
+
+//MARK: class KeyChainManager for storing login credentials in keychain
+class KeyChainManager{
+    
+    static func save( email: String,  password: Data) -> Bool{
+    
+        let query: [String: AnyObject] = [
+            kSecClass as String: kSecClassGenericPassword,
+            kSecValueData as String: password as AnyObject,
+            kSecAttrAccount as String: email as AnyObject,
+            
+        ]
+        if SecItemAdd(query as CFDictionary, nil) == noErr {
+            print("User saved successfully in the keychain")
+            return true
+        } else {
+            print("Something went wrong trying to save the user in the keychain")
+            return false
+        }
+    }
+    
+}//END of KeyChainManager class
+
+//MARK: class CoreDaataFetch to fetch the data store in UserRegisterData
 class CoreDataFetch{
     
     func fetchname(email: String) -> String {
@@ -23,7 +47,6 @@ class CoreDataFetch{
         let appDelegate = (UIApplication.shared.delegate) as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
         
-
         do{
             let edata = try context.fetch(UserRegisterData.fetchRequest()) as! [UserRegisterData]
             
@@ -31,13 +54,11 @@ class CoreDataFetch{
                 let tomatchemail = data.email
                 if(tomatchemail == email ){
                     flag = 1
-                    //callAlert(titles: "Email Already Exist")
                     fetName = data.name!
                     break
-                    //print(tomatchemail)
-                }//end of if
-            }//end for
-        }//end do
+                }//End of if
+            }//END for
+        }//END do
         catch{
             print("error occured while fetching name")
         }
@@ -47,45 +68,11 @@ class CoreDataFetch{
         }
         else{
             return " "
-            
         }
-    }
+    }//END of function fetchname
     
-    func fetchData(email: String) -> UserRegisterData {
-        /*
-        var fetData: UserRegisterData?
-        var flag = 0
-        let appDelegate = (UIApplication.shared.delegate) as! AppDelegate
-        let context = appDelegate.persistentContainer.viewContext
+    func fetchData(email: String) -> UserRegisterData? {
         
-
-        do{
-            let edata = try context.fetch(UserRegisterData.fetchRequest()) as! [UserRegisterData]
-            
-            for data in edata{
-                let tomatchemail = data.email
-                if(tomatchemail == email ){
-                    flag = 1
-                    //callAlert(titles: "Email Already Exist")
-                    fetData = data
-                    break
-                    //print(tomatchemail)
-                }//end of if
-            }//end for
-        }//end do
-        catch{
-            print("error occured while fetching name")
-        }
-        
-        if (flag == 1){
-            return fetData!
-        }
-        else{
-            return fetData!
-            
-        }
-    }
-         */
         let appDelegate = (UIApplication.shared.delegate) as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
         var fetData: UserRegisterData?
@@ -101,13 +88,16 @@ class CoreDataFetch{
         } catch(let error){
             print(error.localizedDescription)
         }
-        return fetData!
         
-}
-}
+            return fetData
+    }//END of func fetchData
+    
+}//End of class CoreDataFetch
 
+//MARK: class AuthenticateUser to authenticate user credential
 class AuthenticateUser{
-    //MARK: Face ID Authentication
+    
+    //Face ID Authentication
     func authenticateUserByFace(){
         let context = LAContext()
         var authError: NSError?
@@ -116,40 +106,36 @@ class AuthenticateUser{
             context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: "Authenticate to access app") { success, error in
                 DispatchQueue.main.async{
                     if success{
-                        //callAlert
-                        print("Successfully Authenticated")
-                    }
-                    else{
-                        //call alert
-                        print("Failed")
+                        print("Successfully Local Authenticated")
+                    }else{
+                        print("Failed Local Authentication")
                     }
                 }//End of dispatch
-            }
+            }//END of evaluatePolicy
         }//End of if
     }//End of func
-    //MARK: Passcode Authentication
+    
+    //Passcode Authentication
     func authenticateUserByPasscode(){
         let context = LAContext()
         var authError: NSError?
         
         if context.canEvaluatePolicy(.deviceOwnerAuthentication, error: &authError){
-            context.evaluatePolicy(.deviceOwnerAuthentication, localizedReason: "Authenticate to access app") { success, error in
+            context.evaluatePolicy(.deviceOwnerAuthentication, localizedReason: "Authenticate to access app")
+            { success, error in
                 DispatchQueue.main.async{
                     if success{
-                        //callAlert
                         print("Successfully Authenticated")
-                    }
-                    else{
-                        //call alert
+                    }else{
                         print("Failed")
                     }
                 }//End of dispatch
-            }
+            }//END of evaluatePolicy
         }//End of if
     }//End of func
     
-    
 }//End of AuthenticateUser class
+
 
 class AuthenticateUserFromFirebase: UIViewController{
     
@@ -185,33 +171,28 @@ class AuthenticateUserFromFirebase: UIViewController{
 class ViewController: UIViewController {
     
     
-    
     //MARK: IBOutlet on ViewController (Login page)
     @IBOutlet weak var emailTxtFld: UITextField!
     @IBOutlet weak var passwordTxtFld: UITextField!
     @IBOutlet weak var logoImg: UIImageView!
     
-    
-    
     //MARK: viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
         //authenticateUserByFace()
-        
-        
-                navigationItem.hidesBackButton = true
+        navigationItem.hidesBackButton = true
         
         //call animation
-        animateLogo()
+        //animateLogo()
     }
     
     //MARK: function animate logo image
     func animateLogo(){
         UIView.animate(withDuration: 2,
             animations: {
-            //CGAffineTransform Structure used to rotate, scale, translate, or skew the objects
-            //transform property to scale or rotate
+            /*CGAffineTransform Structure used to rotate, scale, translate, or skew the objects
+            transform property to scale or rotate*/
             self.logoImg.transform = CGAffineTransform(scaleX: 0, y: 0)
             },
             completion: { _ in
@@ -227,15 +208,19 @@ class ViewController: UIViewController {
         
         Auth.auth().signIn(withEmail: emailId, password: password) { [self] result, error in
             if let _error = error{
-                //self.alerts.invalidCredentials()
                 invalidCredentials()
                 flag = 1
                 print(_error.localizedDescription)
                 
-            }
-            else{
+            }else{
                 flag = 0
                 print("User registered")
+                do{
+                    try KeyChainManager.save(email: emailId, password: Data(password.utf8))
+                }
+                catch{
+                    print("Key chain error\(error)")
+                }
                 let dash = self.storyboard?.instantiateViewController(withIdentifier: "dash") as! DashboardViewController
                 let fetchname = CoreDataFetch()
                 nameUser = fetchname.fetchname(email: emailId)
@@ -245,13 +230,12 @@ class ViewController: UIViewController {
         }
         
         print(flag)
-        if(flag == 0 ){
+        if(flag == 0){
             return true
-        }
-        else{
+        }else{
             return false
         }
-    }
+    }//END of func
     
     
     
@@ -260,28 +244,25 @@ class ViewController: UIViewController {
         
         let email: String = emailTxtFld.text!
         let password: String = passwordTxtFld.text!
-        
         emailIDUser = email
         
         //Call function to authenticate from firebase
         print(logninUserFromFirebase(emailId: email, password: password))
         
-    }//end of func enterButtonClicked
+    }//END of func enterButtonClicked
+    
     
     //MARK: click here! button is clicked
-    
     @IBAction func moveToRegistration(_ sender: Any) {
         let registration = (self.storyboard?.instantiateViewController(withIdentifier: "registerVC"))!
         self.navigationController?.pushViewController(registration, animated: true)
-    }
+    }//END of IBAction
     
     
     //MARK: Validation in Login
     func invalidCredentials(){
         print("Alert")
-       
-            let cancelAction = UIAlertAction(title: "OK",
-                                             style: .cancel) { (action) in
+            let cancelAction = UIAlertAction(title: "OK", style: .cancel) { (action) in
              // Respond to user selection of the action.
             }
             
@@ -295,8 +276,8 @@ class ViewController: UIViewController {
             self.present(alert, animated: true) {
                // The alert was presented
             }
-           
-    }
-}
+    }//END of func invalidCredentials
+    
+}//End of class ViewController
 
 

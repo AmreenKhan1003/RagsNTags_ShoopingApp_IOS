@@ -46,7 +46,7 @@ class CartViewController: UIViewController, UITableViewDelegate, UITableViewData
         let storeitem = CoreDataCart()
         let users = CoreDataFetch()
         let fetchUser = users.fetchData(email: emailIDUser!)
-        if ((fetchUser.toCart?.allObjects) != nil){
+        if ((fetchUser?.toCart?.allObjects) != nil){
         cartItems = storeitem.fetchname()
         cartItemsImg = storeitem.fetchImg()
         cartItemsPrice = storeitem.fetchPrice()
@@ -62,14 +62,14 @@ class CartViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
     }
     
-    
+    /*
     @IBAction func logOutisClicked(_ sender: Any) {
         let dele = CoreDataCart()
         dele.deleteAllItems()
         let navHome = storyboard?.instantiateViewController(withIdentifier: "loginVC")
         self.navigationController?.pushViewController(navHome!, animated: true)
     }
-    
+    */
     @IBAction func buyNowClicked(_ sender: Any) {
         
         let categoryDetailVC = storyboard?.instantiateViewController(withIdentifier: "checkOut") as! CheckoutViewController

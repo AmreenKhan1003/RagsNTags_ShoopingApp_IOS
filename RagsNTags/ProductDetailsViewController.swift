@@ -32,7 +32,8 @@ class CoreDataCart{
         
     }
     
-    func deleteAllItems(){
+    func deleteAllCartItems(){
+        /*
         let store = (UIApplication.shared.delegate) as! AppDelegate
         let viewContext = store.persistentContainer.viewContext
         let fetchRequest: NSFetchRequest<CartData> = CartData.fetchRequest()
@@ -49,7 +50,25 @@ class CoreDataCart{
                 print("cart data has been deleted")
             } catch let error as NSError {
                 print("Detele all data in \(error.userInfo)")
+            }*/
+        let user = CoreDataFetch()
+        let fetchuser = user.fetchData(email: emailIDUser!)
+        let store = (UIApplication.shared.delegate) as! AppDelegate
+        let viewContext = store.persistentContainer.viewContext
+        //let fetchRequest: NSFetchRequest<CartData> = CartData.fetchRequest()
+        
+        do{
+            //let results = try viewContext.fetch(fetchRequest)
+            for managedObject in fetchuser!.toCart!{
+                //let data: NSManagedObject = managedObject.toCart! as NSManagedObject
+                print(managedObject)
+                viewContext.delete(managedObject as! NSManagedObject)
+                
             }
+            print("Cart Data is deleted")
+        }catch let error as NSError{
+            print("error while deleting cart data \(error.localizedDescription)")
+        }
     }
     
 
@@ -57,31 +76,10 @@ class CoreDataCart{
     func fetchname() -> NSMutableArray {
         
         let carts = NSMutableArray()
-        /*
-        let appDelegate = (UIApplication.shared.delegate) as! AppDelegate
-        let context = appDelegate.persistentContainer.viewContext
-
-        do{
-            let cartdata = try context.fetch(CartData.fetchRequest()) as! [CartData]
-            
-            for data in cartdata{
-                //print(data.itemName)
-                //if(userEmail == data.to){
-                    carts.add(data.itemName)
-                    
-                //}
-                
-            }//end for
-            
-        }//end do
-        catch{
-            print("error occured while fetching name")
-        }
-         
-        */
+        
         let users = CoreDataFetch()
         let fetchUser = users.fetchData(email: emailIDUser!)
-        let cartProductArray = fetchUser.toCart?.allObjects as! [CartData]
+        let cartProductArray = fetchUser?.toCart?.allObjects as! [CartData]
         for i in cartProductArray{
             carts.add(i.itemName!)
         }
@@ -91,29 +89,10 @@ class CoreDataCart{
     
     func fetchPrice() -> NSMutableArray{
         let carts = NSMutableArray()
-        /*
-        let appDelegate = (UIApplication.shared.delegate) as! AppDelegate
-        let context = appDelegate.persistentContainer.viewContext
-
-        do{
-            let cartdata = try context.fetch(CartData.fetchRequest()) as! [CartData]
-            
-            for data in cartdata{
-                //print(data.itemName)
-                //if(userEmail == data.touser?.email){
-                carts.add(data.itemPrice)
-                //}
-                
-            }//end for
-            
-        }//end do
-        catch{
-            print("error occured while fetching Price")
-        }
-         */
+        
         let users = CoreDataFetch()
         let fetchUser = users.fetchData(email: emailIDUser!)
-        let cartProductArray = fetchUser.toCart?.allObjects as! [CartData]
+        let cartProductArray = fetchUser?.toCart?.allObjects as! [CartData]
         for i in cartProductArray{
             carts.add(i.itemPrice!)
         }
@@ -125,31 +104,10 @@ class CoreDataCart{
         
         
         let carts = NSMutableArray()
-        /*
-        let appDelegate = (UIApplication.shared.delegate) as! AppDelegate
-        let context = appDelegate.persistentContainer.viewContext
-
-        do{
-            let cartdata = try context.fetch(CartData.fetchRequest()) as! [CartData]
-            
-            for data in cartdata{
-                //print(data.itemName)
-                //if(userEmail == data.touser?.email){
-                    carts.add(data.itemImg)
-                    
-                //}
-                
-            }//end for
-            
-        }//end do
-        catch{
-            print("error occured while fetching name")
-        }
-         
-        */
+        
         let users = CoreDataFetch()
         let fetchUser = users.fetchData(email: emailIDUser!)
-        let cartProductArray = fetchUser.toCart?.allObjects as! [CartData]
+        let cartProductArray = fetchUser?.toCart?.allObjects as! [CartData]
         for i in cartProductArray{
             carts.add(i.itemImg!)
         }
@@ -266,13 +224,13 @@ class ProductDetailsViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
-    
+    /*
     @IBAction func logOutisClicked(_ sender: Any) {
         let dele = CoreDataCart()
         dele.deleteAllItems()
         let navHome = storyboard?.instantiateViewController(withIdentifier: "loginVC")
         self.navigationController?.pushViewController(navHome!, animated: true)
-    }
+    }*/
     
     func callAlerts(titles: String, messages: String){
         
