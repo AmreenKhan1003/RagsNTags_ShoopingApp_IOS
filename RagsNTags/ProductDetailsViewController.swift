@@ -33,24 +33,7 @@ class CoreDataCart{
     }
     
     func deleteAllCartItems(){
-        /*
-        let store = (UIApplication.shared.delegate) as! AppDelegate
-        let viewContext = store.persistentContainer.viewContext
-        let fetchRequest: NSFetchRequest<CartData> = CartData.fetchRequest()
-            fetchRequest.returnsObjectsAsFaults = false
-
-            do
-            {
-                let results = try viewContext.fetch(fetchRequest)
-                for managedObject in results
-                {
-                    let managedObjectData:NSManagedObject = managedObject as NSManagedObject
-                    viewContext.delete(managedObjectData)
-                }
-                print("cart data has been deleted")
-            } catch let error as NSError {
-                print("Detele all data in \(error.userInfo)")
-            }*/
+        
         let user = CoreDataFetch()
         let fetchuser = user.fetchData(email: emailIDUser!)
         let store = (UIApplication.shared.delegate) as! AppDelegate
@@ -207,9 +190,6 @@ class ProductDetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        //print(storeitem.fetchname())
-        //print(passName)
         titles.text = passName!
         
         do{
@@ -219,18 +199,9 @@ class ProductDetailsViewController: UIViewController {
         
         descDisplay.text = passDesc!
         priceDisplay.text = passPrice!
-        
-        
 
-        // Do any additional setup after loading the view.
     }
-    /*
-    @IBAction func logOutisClicked(_ sender: Any) {
-        let dele = CoreDataCart()
-        dele.deleteAllItems()
-        let navHome = storyboard?.instantiateViewController(withIdentifier: "loginVC")
-        self.navigationController?.pushViewController(navHome!, animated: true)
-    }*/
+    
     
     func callAlerts(titles: String, messages: String){
         

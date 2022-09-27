@@ -26,6 +26,9 @@ class DashboardViewController: UIViewController {
         navigationItem.hidesBackButton = true
     }
     
+    
+   
+    
     @IBAction func groceriesClicked(_ sender: Any) {
         let groc = storyboard?.instantiateViewController(withIdentifier: "SelecCatVC") as! SelectedCategoryViewController
         groc.passcategory = "groceries"

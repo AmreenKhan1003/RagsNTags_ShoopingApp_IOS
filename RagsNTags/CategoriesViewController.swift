@@ -45,6 +45,7 @@ class CategoriesViewController: UIViewController, UITableViewDelegate, UITableVi
         
     }//end function
     
+
     
     func parsejson(jsonCategories: Data){
         do {

@@ -164,7 +164,12 @@ class AuthenticateUserFromFirebase: UIViewController{
     
 }//End of class AuthenticateUserFromFirbase
 
-
+public class Logout: UIViewController{
+    public func logoutClicked(){
+        let log = (self.storyboard?.instantiateViewController(withIdentifier: "loginVC")) as! ViewController 
+        self.navigationController?.pushViewController(log, animated: true)
+    }
+}
 
 
 

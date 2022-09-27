@@ -13,6 +13,8 @@
 		061DB76928E304FF009DAC1C /* RegistrationTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061DB76828E304FF009DAC1C /* RegistrationTest.swift */; };
 		061DB77328E33C1D009DAC1C /* DashboardTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061DB77228E33C1D009DAC1C /* DashboardTest.swift */; };
 		061DB77728E345D7009DAC1C /* CategoryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061DB77628E345D7009DAC1C /* CategoryTest.swift */; };
+		061DB77928E34A33009DAC1C /* SelectedCategoryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061DB77828E34A33009DAC1C /* SelectedCategoryTest.swift */; };
+		061DB77B28E34D25009DAC1C /* ProductDetailTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061DB77A28E34D25009DAC1C /* ProductDetailTest.swift */; };
 		063091D328E2E2B0002620BD /* LoginTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063091D228E2E2B0002620BD /* LoginTest.swift */; };
 		0636AE6328DCBC5400D8447E /* SelectedCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0636AE6228DCBC5400D8447E /* SelectedCategoryViewController.swift */; };
 		06431E3428DB57600033D3CB /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06431E3328DB57600033D3CB /* DashboardViewController.swift */; };
@@ -110,6 +112,8 @@
 		061DB76828E304FF009DAC1C /* RegistrationTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationTest.swift; sourceTree = "<group>"; };
 		061DB77228E33C1D009DAC1C /* DashboardTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardTest.swift; sourceTree = "<group>"; };
 		061DB77628E345D7009DAC1C /* CategoryTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTest.swift; sourceTree = "<group>"; };
+		061DB77828E34A33009DAC1C /* SelectedCategoryTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedCategoryTest.swift; sourceTree = "<group>"; };
+		061DB77A28E34D25009DAC1C /* ProductDetailTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailTest.swift; sourceTree = "<group>"; };
 		063091D228E2E2B0002620BD /* LoginTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTest.swift; sourceTree = "<group>"; };
 		0636AE6228DCBC5400D8447E /* SelectedCategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedCategoryViewController.swift; sourceTree = "<group>"; };
 		063CB36F28E1111700327213 /* AlertsAndNotifications */ = {isa = PBXFileReference; lastKnownFileType = folder; name = AlertsAndNotifications; path = ../AlertsAndNotifications; sourceTree = "<group>"; };
@@ -244,6 +248,8 @@
 				063091D228E2E2B0002620BD /* LoginTest.swift */,
 				061DB77228E33C1D009DAC1C /* DashboardTest.swift */,
 				061DB77628E345D7009DAC1C /* CategoryTest.swift */,
+				061DB77828E34A33009DAC1C /* SelectedCategoryTest.swift */,
+				061DB77A28E34D25009DAC1C /* ProductDetailTest.swift */,
 			);
 			path = RagsNTagsTests;
 			sourceTree = "<group>";
@@ -609,7 +615,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				061DB77928E34A33009DAC1C /* SelectedCategoryTest.swift in Sources */,
 				061DB77728E345D7009DAC1C /* CategoryTest.swift in Sources */,
+				061DB77B28E34D25009DAC1C /* ProductDetailTest.swift in Sources */,
 				066A6D6028DAD88F00E2FD39 /* RagsNTagsTests.swift in Sources */,
 				063091D328E2E2B0002620BD /* LoginTest.swift in Sources */,
 				061DB77328E33C1D009DAC1C /* DashboardTest.swift in Sources */,

@@ -126,8 +126,8 @@
             filePath = "RagsNTags/DashboardViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "59"
-            endingLineNumber = "59">
+            startingLineNumber = "62"
+            endingLineNumber = "62">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -284,8 +284,8 @@
             filePath = "RagsNTags/ProductDetailsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "141"
-            endingLineNumber = "141"
+            startingLineNumber = "124"
+            endingLineNumber = "124"
             landmarkName = "fetchUser()"
             landmarkType = "7">
          </BreakpointContent>
@@ -300,9 +300,9 @@
             filePath = "RagsNTags/ProductDetailsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "129"
-            endingLineNumber = "129"
-            landmarkName = "fetchUser()"
+            startingLineNumber = "112"
+            endingLineNumber = "112"
+            landmarkName = "fetchImg()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -316,9 +316,9 @@
             filePath = "RagsNTags/ProductDetailsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "130"
-            endingLineNumber = "130"
-            landmarkName = "fetchUser()"
+            startingLineNumber = "113"
+            endingLineNumber = "113"
+            landmarkName = "fetchImg()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -332,9 +332,9 @@
             filePath = "RagsNTags/ProductDetailsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "163"
-            endingLineNumber = "163"
-            landmarkName = "registerOnCoreData(name:price:img:)"
+            startingLineNumber = "146"
+            endingLineNumber = "146"
+            landmarkName = "fetchUser()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -364,8 +364,8 @@
             filePath = "RagsNTags/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "250"
-            endingLineNumber = "250"
+            startingLineNumber = "255"
+            endingLineNumber = "255"
             landmarkName = "enterButtonIsClicked(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -444,8 +444,8 @@
             filePath = "RagsNTags/ProductDetailsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "66"
-            endingLineNumber = "66"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
             landmarkName = "deleteAllCartItems()"
             landmarkType = "7">
          </BreakpointContent>
@@ -460,8 +460,8 @@
             filePath = "RagsNTags/ProductDetailsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "65"
-            endingLineNumber = "65"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
             landmarkName = "deleteAllCartItems()"
             landmarkType = "7">
          </BreakpointContent>
