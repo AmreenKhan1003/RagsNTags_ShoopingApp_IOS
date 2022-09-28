@@ -137,41 +137,6 @@ class AuthenticateUser{
 }//End of AuthenticateUser class
 
 
-class AuthenticateUserFromFirebase: UIViewController{
-    
-    func logninUserFromFirebase(emailId: String, password: String) -> Bool{
-        var flag = 0
-        
-        Auth.auth().signIn(withEmail: emailId, password: password) { result, error in
-            if let _error = error{
-                flag = 1
-                print(_error.localizedDescription)
-            }
-            else{
-                flag = 0
-                print("User registered")
-            }
-        }
-        
-        print(flag)
-        if(flag == 0 ){
-            return true
-        }
-        else{
-            return false
-        }
-    }
-    
-}//End of class AuthenticateUserFromFirbase
-
-public class Logout: UIViewController{
-    public func logoutClicked(){
-        let log = (self.storyboard?.instantiateViewController(withIdentifier: "loginVC")) as! ViewController 
-        self.navigationController?.pushViewController(log, animated: true)
-    }
-}
-
-
 
 class ViewController: UIViewController {
     
@@ -201,7 +166,7 @@ class ViewController: UIViewController {
             self.logoImg.transform = CGAffineTransform(scaleX: 0, y: 0)
             },
             completion: { _ in
-            UIView.animate(withDuration: 3) {
+            UIView.animate(withDuration: 2) {
                     self.logoImg.transform = CGAffineTransform.identity
                 }
             })

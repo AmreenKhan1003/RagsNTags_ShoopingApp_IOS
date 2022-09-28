@@ -19,12 +19,15 @@ class ThankYouViewController: UIViewController {
     }
     
     @IBAction func okIsClicked(_ sender: Any) {
+        //Call notification from framework
         let not = Notifications()
         not.sendnotice()
         
+        //Clear the cart as Items are bought
         let clearCart = CoreDataCart()
         clearCart.deleteAllCartItems()
         
+        //Move the user to dashboard
         let backtohome = storyboard?.instantiateViewController(withIdentifier: "dash") as! DashboardViewController
         backtohome.name = nameUser!
         self.navigationController?.pushViewController(backtohome, animated: true)

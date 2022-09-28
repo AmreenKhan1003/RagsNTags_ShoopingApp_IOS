@@ -229,4 +229,4 @@ class RegisterViewController: UIViewController {
         }
     }//END of if
     
-}//END of IBAction
+}
